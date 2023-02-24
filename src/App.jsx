@@ -6,7 +6,7 @@ import Container from '@mui/material/Container';
 import { ThemeProvider } from '@mui/material/styles';
 import theme from './components/styled/Theme';
 import Banner from './components/Banner';
-
+import Intro from './components/Intro';
 
 function App() {
   useEffect(() => {
@@ -23,6 +23,7 @@ function App() {
       >
         <Navbar />
         <Banner />
+        <Intro />
         {/* 
       <Router>
         
