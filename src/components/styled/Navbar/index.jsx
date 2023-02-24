@@ -1,6 +1,6 @@
 import { List, Typography } from "@mui/material";
 import { styled  } from "@mui/material/styles"
-import { Box } from "@mui/system"
+import { Box } from "@mui/material"
 import { Colors } from '../Theme';
 import '@fontsource/montez';
 

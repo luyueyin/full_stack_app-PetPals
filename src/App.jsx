@@ -1,13 +1,11 @@
-import './App.css';
 import { useEffect } from 'react';
 // import Home from './Home/HomePage'
-import Navbar from './components'
+import Navbar from './components/Navbar'
 // import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import Button from '@mui/material/Button';
-import Title from './styled/Title';
 import Container from '@mui/material/Container';
 import { ThemeProvider } from '@mui/material/styles';
-import theme from './styled/Theme';
+import theme from './components/styled/Theme';
+import Banner from './components/Banner';
 
 
 function App() {
@@ -20,10 +18,11 @@ function App() {
       <Container
         maxWidth="xl"
         sx={{
-          background: 'lightblue'
+          background: '#daf1f7',
         }}
       >
         <Navbar />
+        <Banner />
         {/* 
       <Router>
         
@@ -32,8 +31,6 @@ function App() {
         </Routes>
         <Buttons />
       </Router> */}
-        <h1>This is a title!</h1>
-        <Button variant='contained'>Test</Button>
       </Container>
     </ThemeProvider>
   );
