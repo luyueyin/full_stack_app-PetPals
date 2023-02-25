@@ -1,14 +1,18 @@
+import PetParent from './Pages/Petparent';
+import PetSitter from './Pages/Petsitter';
 import { useEffect } from 'react';
-// import Home from './Home/HomePage'
+
 import Navbar from './components/Navbar'
-// import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Container from '@mui/material/Container';
 import { ThemeProvider } from '@mui/material/styles';
 import theme from './components/styled/Theme';
 import Banner from './components/Banner';
 import Intro from './components/SlidingAd';
-import HomepageOptions from './components/ButtonGroup'
+import ButtonGroup from './components/ButtonGroup'
 import Service from './components/Service';
+
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+
 
 function App() {
   useEffect(() => {
@@ -26,16 +30,17 @@ function App() {
         <Navbar />
         <Banner />
         <Intro />
-        <HomepageOptions />
+        <ButtonGroup />
         <Service />
-        {/* 
-      <Router>
-        
-        <Routes>
-          <Route path='/' exact />
-        </Routes>
-        <Buttons />
-      </Router> */}
+
+        {/* <Router>
+          <Route>
+            <Route path='/' exact />
+            <Route path='/petparent' element={<PetParent />} />
+            <Route path='/petsitter' element={<PetSitter />}/>
+          </Route>
+        </Router>
+         */}
       </Container>
     </ThemeProvider>
   );
