@@ -1,6 +1,6 @@
 import { Slide } from "@mui/material";
 import { useEffect, useState } from "react"
-import { IntroContainer, IntroText } from "./styled/Intro"
+import { IntroContainer, IntroText, Options } from "./styled/Intro/1"
 
 const messages = [
     "Thousands of pet sitters in your area",
@@ -46,7 +46,7 @@ export default function Intro() {
                 <IntroText>
                     {messages[messagesIndex]}
                 </IntroText>
-            </Slide>
+            </Slide>            
         </IntroContainer>
     )
 }

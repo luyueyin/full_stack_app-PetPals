@@ -1,6 +1,7 @@
 import { Box, styled, Typography } from "@mui/material";
 import theme, { Colors } from "../Theme"
 
+
 export const IntroContainer = styled(Box)(({ theme }) => ({
     [theme.breakpoints.up('md')]: {
         padding: '40px 0px 40px 0px'
@@ -20,4 +21,3 @@ export const IntroText = styled(Typography)(({ theme }) => ({
     color: Colors.success,
     fontSize: '1.2rem'
 }))
-

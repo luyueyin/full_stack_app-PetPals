@@ -1,25 +1,31 @@
-// import Stack from '@mui/material/Stack';
-// import Button from '@mui/material/Button';
-// import { theme } from './Theme';
-// import { ThemeProvider } from '@mui/material/styles';
-// import { useEffect } from 'react';
+import Stack from '@mui/material/Stack';
+import Button from '@mui/material/Button';
+import { ThemeProvider } from '@mui/material/styles';
+import { useEffect } from 'react';
+import theme, { Colors } from "../styled/Theme"
 
+export default function Buttons(props) {
+    useEffect(() => {
+        document.title = 'React Material UI - Home';
+    }, []);
+    const buttonStyle = {
+        borderRadius: 18
+    };
 
-// export default function Buttons() {
-//     useEffect(()=> {
-//         document.title = 'React Material UI - Home';
-//     },[]);
-
-//     return (
-
-//         <stack spacing={5}>
-//             <Stack spacing={2} direction="row" onClick>
-//                 <ThemeProvider theme={theme}>
-//                     <Button variant="contained" color='primary' href='#'>Contained</Button>
-//                     <Button variant="outlined" size='small'>Outlined</Button>
-//                     <Button disabled>disabled</Button>
-//                 </ThemeProvider>
-//             </Stack>
-//         </stack>
-//     );
-// }
+    return (
+        <stack spacing={5}>
+            <Stack spacing={9} direction="row" onClick>
+                <ThemeProvider theme={theme}>
+                    <Button
+                        variant="contained"
+                        color='success'
+                        onClick={props.onClick}
+                        style={buttonStyle}
+                    >
+                        {props.text}
+                    </Button>
+                </ThemeProvider>
+            </Stack>
+        </stack>
+    );
+}
