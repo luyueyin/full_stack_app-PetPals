@@ -1,18 +1,22 @@
 import Button from "./styled/Button"
-import { IntroContainer2, IntroText2, ButtonContainer } from './styled/Intro/2'
+import {IntroText, IntroButtonContainer, ButtonContainer } from './styled/StyledIntro'
 
 
 export default function HomepageOptions() {
 
     return (
-        <IntroContainer2>
-            <IntroText2>
+        <IntroButtonContainer>
+            <IntroText>
                 <h3>What would you like to do?</h3>
-            </IntroText2>
+            </IntroText>
             <ButtonContainer>
-                <Button text="Schedule a Service" onClick={() => console.log('Button clicked!')} />
-                <Button text="Post Job For Free"onClick={() => console.log('Button clicked!')} />
+                <Button text="Schedule a Service" onClick={() => {
+                    alert('clicked');
+                }} />
+                <Button text="Post Job For Free" onClick={() => {
+                    alert('clicked');
+                }} />
             </ButtonContainer>
-        </IntroContainer2>
+        </IntroButtonContainer>
     )
 }

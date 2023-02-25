@@ -1,6 +1,6 @@
 import { Slide } from "@mui/material";
 import { useEffect, useState } from "react"
-import { IntroContainer, IntroText, Options } from "./styled/Intro/1"
+import { IntroContainer, IntroText } from "./styled/StyledIntro"
 
 const messages = [
     "Thousands of pet sitters in your area",

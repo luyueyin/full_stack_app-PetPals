@@ -8,19 +8,24 @@ export default function Buttons(props) {
     useEffect(() => {
         document.title = 'React Material UI - Home';
     }, []);
-    const buttonStyle = {
-        borderRadius: 18
+    const StyledButton = {
+        borderRadius: 25,
+        padding: '10px 50px 10px 50px',
+        fontSize: '15px',
+        textTransform: 'none',
+        color: Colors.white,
+        backgroundColor: Colors.secondary,
+        textSpacing: '30'
     };
 
     return (
         <stack spacing={5}>
-            <Stack spacing={9} direction="row" onClick>
+            <Stack spacing={9} direction="row">
                 <ThemeProvider theme={theme}>
                     <Button
                         variant="contained"
-                        color='success'
                         onClick={props.onClick}
-                        style={buttonStyle}
+                        style={StyledButton}
                     >
                         {props.text}
                     </Button>
