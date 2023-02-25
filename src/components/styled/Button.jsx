@@ -1,14 +1,26 @@
 import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
-import { ThemeProvider } from '@mui/material/styles';
+import { makeStyles, ThemeProvider, Typography, styled } from '@mui/material/styles';
 import { useEffect } from 'react';
-import theme, { Colors } from "../styled/Theme"
+import theme, { Colors } from "./Theme"
 
-export default function Buttons(props) {
-    useEffect(() => {
-        document.title = 'React Material UI - Home';
-    }, []);
-    const StyledButton = {
+
+export default function CustomButton(props) {
+
+
+    // const CustomButton = styled()(({ theme }) => ({
+    //     borderRadius: 25,
+    //     padding: '10px 50px 10px 50px',
+    //     fontSize: '15px',
+    //     textTransform: 'none',
+    //     color: Colors.white,
+    //     backgroundColor: Colors.secondary,
+    //     textSpacing: '30'
+
+    // }))
+
+
+    const StyledButton = styled()(({ theme }) => ({
         borderRadius: 25,
         padding: '10px 50px 10px 50px',
         fontSize: '15px',
@@ -16,7 +28,7 @@ export default function Buttons(props) {
         color: Colors.white,
         backgroundColor: Colors.secondary,
         textSpacing: '30'
-    };
+    }));
 
     return (
         <stack spacing={5}>
@@ -26,6 +38,7 @@ export default function Buttons(props) {
                         variant="contained"
                         onClick={props.onClick}
                         style={StyledButton}
+                        theme={theme}
                     >
                         {props.text}
                     </Button>

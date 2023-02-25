@@ -1,4 +1,3 @@
-import { Typography } from '@mui/material';
 import { createTheme } from '@mui/material/styles';
 
 export const Colors = {
@@ -32,7 +31,7 @@ const theme = createTheme({
         Button: {
             defaultProps: {
                 disableRipple: true,
-                dispatchEvent:true
+                dispatchEvent: true
             }
         }
     }

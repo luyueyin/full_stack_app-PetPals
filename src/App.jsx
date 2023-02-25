@@ -6,8 +6,9 @@ import Container from '@mui/material/Container';
 import { ThemeProvider } from '@mui/material/styles';
 import theme from './components/styled/Theme';
 import Banner from './components/Banner';
-import Intro from './components/Intro-1';
-import HomepageOptions from './components/Intro-2'
+import Intro from './components/SlidingAd';
+import HomepageOptions from './components/ButtonGroup'
+import Service from './components/Service';
 
 function App() {
   useEffect(() => {
@@ -26,6 +27,7 @@ function App() {
         <Banner />
         <Intro />
         <HomepageOptions />
+        <Service />
         {/* 
       <Router>
         
