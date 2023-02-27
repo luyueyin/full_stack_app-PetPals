@@ -1,6 +1,8 @@
 import { Slide } from "@mui/material";
 import { useEffect, useState } from "react"
-import { IntroContainer, IntroText } from "./styled/StyledIntro"
+import { IntroContainer } from "./styled/StyledIntro"
+import { Bodytext } from './styled/Font';
+
 
 const messages = [
     "Thousands of pet sitters in your area",
@@ -43,9 +45,9 @@ export default function Intro() {
             <Slide 
                 direction={showMessage ? "left" : "right"} in={showMessage} timeout={{ enter: 500, exit: 300 }}
             >
-                <IntroText>
+                <Bodytext>
                     {messages[messagesIndex]}
-                </IntroText>
+                </Bodytext>
             </Slide>            
         </IntroContainer>
     )

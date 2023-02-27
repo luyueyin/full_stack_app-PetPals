@@ -1,6 +1,6 @@
 import { Grid, Box, styled, Typography } from "@mui/material";
-import theme from "./Theme"
-
+import theme, {Colors} from "./Theme"
+import Stack from '@mui/material/Stack';
 
 export const IntroContainer = styled(Box)(({ theme }) => ({
     [theme.breakpoints.up('md')]: {
@@ -13,16 +13,6 @@ export const IntroContainer = styled(Box)(({ theme }) => ({
     background: 'background'
 }))
 
-export const IntroText = styled(Typography)(({ theme }) => ({
-    fontFamily: '"cursive"',
-    [theme.breakpoints.up('md')]: {
-        fontSize: '1.7rem',
-    },
-    color: 'secondary',
-    fontSize: '1.2rem',
-    textAlign: 'center',
-    maxWidth: '80%',
-}))
 
 //----------------------------------------------------------------
 //ButtonGroup Section
@@ -30,25 +20,14 @@ export const IntroText = styled(Typography)(({ theme }) => ({
 
 export const IntroButtonContainer = styled(Box)(({ theme }) => ({
     [theme.breakpoints.up('md')]: {
-        padding: '60px 0px 90px 0px'
+        padding: '80px 0px 90px 0px'
     },
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
-    // padding: '20px 20px 20px 0px',
-    background: 'light'
-}))
-
-
-export const ButtonContainer = styled(Grid)(({ theme }) => ({
-    [theme.breakpoints.up('md')]: {
-        // padding: '60px 0px 90px 0px'
-    },
-    display: 'flex',
-    flexDirection: 'row',
-    columnGap: '3rem',
-    justifyContent: 'center',
+    padding: '100px 20px 20px 0px',
+    // background: 'green',
 }))
 
 
@@ -57,33 +36,19 @@ export const ButtonContainer = styled(Grid)(({ theme }) => ({
 //----------------------------------------------------------------
 
 
-export const ServiceContainer = styled(Box)(({ theme }) => ({
-    [theme.breakpoints.up('md')]: {
-        padding: '70px 90px 80px90px'
-    },
-    // flexGrow: 1,
+export const ServiceContainer = styled(Box)({
+
     display: 'flex',
     flexDirection: 'column',
-    justifyContent: 'center',
-    alignItems: 'center',
-    padding: '70px',
-    background: 'light'
-}))
+    justifyContent: 'left',
+    alignItems: 'left',
+    padding: '10%',
+    background: 'green',
+    width: '80%',
+})
 
 
 
-export const Bodytext = styled(Typography)(({ theme }) => ({
-    fontFamily: '"cursive"',
-    [theme.breakpoints.up('md')]: {
-        fontSize: '2.9rem',
-        maxWidth: '900px',
-        textAlign: 'left',
-    },
-    color: 'success',
-    fontSize: '1.9rem',
-    textAlign: 'center',
-
-}))
 
 
 

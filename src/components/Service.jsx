@@ -1,73 +1,188 @@
-import { IntroText, IntroButtonContainer, ServiceContainer, Bodytext } from './styled/StyledIntro'
+import { IntroButtonContainer, ServiceContainer } from './styled/StyledIntro'
 import MeetingRoomRoundedIcon from '@mui/icons-material/MeetingRoomRounded';
 import DirectionsCarRoundedIcon from '@mui/icons-material/DirectionsCarRounded';
 // import Stack from '@mui/material/Stack';
-import { Grid, Box, styled, Typography, Stack, useMediaQuery } from "@mui/material";
+import { Grid, Box, styled, Typography, Stack, useMediaQuery, Paper } from "@mui/material";
+import { Bodytext } from './styled/Font'
+import { color } from '@mui/system';
+import { Padding } from '@mui/icons-material';
+import { Colors } from './styled/Theme';
+import { useEffect, useState } from "react"
 
 
-// const Icon = styled.box(({ theme }) => ({
-//     marginRight: theme.spacing(10),
-//     display: "flex",
-//     alignItems: "center",
-//     justifyContent: "center",
-//     height: '100%',
-//     spacing: '6',
-// }));
+const message = [
+    "Come to your home and take care of your pet while you're away. They will play with your pets, offer food and water, give potty breaks or clean the litter box, and provide any other necessary care.",
+    "Spends the day at your sitter’s home. Drop them off in the morning and pick up a happy pup in the evening.",
+    "Provide round-the-clock care for your pet, and stay overnight in your sitter’s home.",
+    "Take your dog for a walk while you're away. Perfect for busy days and dogs with extra energy to burn.",
+    "Provide transportation for your pet to and from appointments, such as vet visits."
+]
 
 
-const SectionTitle = styled(Typography)(({ theme }) => ({
-    display: "flex",
-    alignItems: "center",
-    marginBottom: theme.spacing(1),
-}));
-
+// const Services = styled(Stack)(({ theme }) => ({
+//     [theme.breakpoints.up('sm')]: {
+//         direction: 'row',
+//     },
+//     direction: 'column',
+//     spacing: '10',
+//     display: 'flex',
+//     justifyContent: 'center',
+//     alignItems: 'center',
+//     padding: '10 40px',
+// }))
 
 export default function Service() {
-    const isLargeScreen = useMediaQuery((theme) => theme.breakpoints.up("md"));
+
+    // const [serviceTypeIndex, setServiceTypeIndex] = useState(0)
+
+    // useEffect(() => {
+    //     const TypeIndex = setServiceTypeIndex(() => {
+
+    //         setServiceTypeIndex(i => i + 1)
+    //     })
+
+    //     return () => {
+    //         serviceTypeIndex(TypeIndex);
+    //     }
+    // },[])
+
 
     return (
         <IntroButtonContainer>
-            <ServiceContainer>
-                <Bodytext>
-                    <h1>Why us ?</h1>
-                </Bodytext>
-                <Box sx={{ flexGrow: 1 }}>
-                    <Grid container
-                        spacing={{ xs: 6, md: 8 }}
-                        justifyContent="center"
-                        columnSpacing={{ xs: 6, md: 3 }}
-                        columns={{ xs: 3, sm: 8, md: 6 }}
-                        // padding='80px 0px 50px 0px'
-                        flexDirection="sm:column, md:row"
+            <Bodytext>
+                <h1>Why us ?</h1>
+            </Bodytext>
+
+            {/* 1 */}
+            <ServiceContainer justify="flex-end">
+                <Stack
+                    direction={{ xs: 'column', md: 'row' }}
+                    backgroundColor={Colors.dk_primary}
+                    marginTop={'80px'}
+                    spacing={{ sm: -4, md: 8 }}
+                    padding={'8px 40px'}
+                    borderRadius={'30px'}
+                    alignItems={'center'}
+                    justifyContent={'left'}
+                    Width={'100%'}
+                >
+                    <Stack
+                        alignItems={'center'}
+                        justifyContent={'center'}
+                        marginTop={'50px'}
+                        spacing={{ sm: -3, md: -2 }}
                     >
-                        <Grid container item
-                            // xs={12} sm={9} md={2} 
-                            display='flex'
-                            alignItems='center'
-                            justifyContent="center"
-                        // spacing={20}
-                        >
-                            {<SectionTitle>
-                                <MeetingRoomRoundedIcon color="secondary" sx={{ fontSize: 100 }} marginRight="80px" />
-                            </SectionTitle>}
+                        <MeetingRoomRoundedIcon color="" sx={{ fontSize: 60, width: 200 }} />
+                        <Bodytext><h4>Drop-In Visits</h4></Bodytext>
+                    </Stack>
+                    <Bodytext textAlign={{ sm: 'center', md: 'left' }}>
+                        <h6>{message[0]}</h6>
+                    </Bodytext>
+                </Stack>
 
+                {/* 2 */}
+                <Stack
+                    direction={{ xs: 'column', md: 'row' }}
+                    backgroundColor={Colors.dk_primary}
+                    margin={'30px'}
+                    spacing={{ sm: -4, md: 8 }}
+                    padding={'8px 40px'}
+                    borderRadius={'30px'}
+                    alignItems={'center'}
+                    justifyContent={'flex-start'}
+                    Width={'100%'}
+                >
+                    <Stack
+                        alignItems={'center'}
+                        justifyContent={'flex-start'}
+                        marginTop={'50px'}
+                        spacing={{ sm: -3, md: -2 }}
+                    >
+                        <MeetingRoomRoundedIcon color="" sx={{ fontSize: 60, width: 200 }} />
+                        <Bodytext><h4>Day Care</h4></Bodytext>
+                    </Stack>
+                    <Bodytext textAlign={{ sm: 'center', md: 'left' }}>
+                        <h6>{message[1]}</h6>
+                    </Bodytext>
+                </Stack>
 
-                            <Grid
-                                container item
-                                // xs={12} sm={9} md={10} 
-                            >
-                                <Bodytext>
-                                    <h2>Drop-In Visits</h2>
-                                    <h6>Come to your home and take care of your pet while you're away. They will play with your pets, offer food and water, give potty breaks or clean the litter box, and provide any other necessary care.</h6>
-                                </Bodytext>
-                            </Grid>
-                        </Grid>
-                    </Grid>
+                {/* 3 */}
+                <Stack
+                    direction={{ xs: 'column', md: 'row' }}
+                    backgroundColor={Colors.dk_primary}
+                    // margin={'30px'}
+                    spacing={{ sm: -4, md: 8 }}
+                    // padding={'8px 40px'}
+                    borderRadius={'30px'}
+                    alignItems={'center'}
+                    justifyContent={'left'}
+                    Width={'100%'}
+                >
+                    <Stack
+                        alignItems={'center'}
+                        justifyContent={'center'}
+                        marginTop={'50px'}
+                        spacing={{ sm: -3, md: -2 }}
+                    >
+                        <MeetingRoomRoundedIcon color="" sx={{ fontSize: 60, width: 200 }} />
+                        <Bodytext><h4>Overnight Care</h4></Bodytext>
+                    </Stack>
+                    <Bodytext textAlign={{ sm: 'center', md: 'left' }}>
+                        <h6>{message[2]}</h6>
+                    </Bodytext>
+                </Stack>
 
-                </Box>
+                {/* 4 */}
+                <Stack
+                    direction={{ xs: 'column', md: 'row' }}
+                    backgroundColor={Colors.dk_primary}
+                    margin={'30px'}
+                    spacing={{ sm: -4, md: 8 }}
+                    // padding={'8px 40px'}
+                    borderRadius={'30px'}
+                    alignItems={'center'}
+                    justifyContent={'left'}
+                    Width={'100%'}
+                >
+                    <Stack
+                        alignItems={'center'}
+                        justifyContent={'center'}
+                        marginTop={'50px'}
+                        spacing={{ sm: -3, md: -2 }}
+                    >
+                        <MeetingRoomRoundedIcon color="" sx={{ fontSize: 60, width: 200 }} />
+                        <Bodytext><h4>Dog Walking</h4></Bodytext>
+                    </Stack>
+                    <Bodytext textAlign={{ sm: 'center', md: 'left' }}>
+                        <h6>{message[3]}</h6>
+                    </Bodytext>
+                </Stack>
 
-
-
+                {/* 5 */}
+                <Stack
+                    direction={{ xs: 'column', md: 'row' }}
+                    backgroundColor={Colors.dk_primary}
+                    margin={'30px'}
+                    spacing={{ sm: -4, md: 8 }}
+                    // padding={'8px 40px'}
+                    borderRadius={'30px'}
+                    alignItems={'center'}
+                    justifyContent={'left'}
+                    Width={'100%'}
+                >
+                    <Stack
+                        alignItems={'center'}
+                        justifyContent={'left'}
+                        marginTop={'50px'}
+                        spacing={{ sm: -3, md: -2 }}
+                    >
+                        <MeetingRoomRoundedIcon color="" sx={{ fontSize: 60, width: 200 }} />
+                        <Bodytext><h4>Drop-In Visits</h4></Bodytext>
+                    </Stack>
+                    <Bodytext textAlign={{ sm: 'center', md: 'left' }}>
+                        <h6>{message[4]}</h6>
+                    </Bodytext>
+                </Stack>
             </ServiceContainer>
         </IntroButtonContainer >
 

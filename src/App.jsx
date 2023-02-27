@@ -12,6 +12,7 @@ import ButtonGroup from './components/ButtonGroup'
 import Service from './components/Service';
 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Button } from '@mui/material';
 
 
 function App() {
@@ -40,6 +41,7 @@ function App() {
             <Route path='/petsitter' element={<PetSitter />}/>
           </Routes>
         </Router>
+        <Button variant='contained'>Text</Button>
         
       </Container>
     </ThemeProvider>

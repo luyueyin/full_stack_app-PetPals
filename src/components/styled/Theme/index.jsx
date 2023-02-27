@@ -1,35 +1,43 @@
 import { createTheme } from '@mui/material/styles';
 
+export const Colors = {
+    primary: '#88b3b5',
+    secondary: '#5b6eeb',
+    white: '#ebf2f2',
+    black: '#161a19',
+    grey: '#bbbfbf',
+    background: '#d0d8dc',
+    danger: "#db301d",
+    success: "#4caf50",
+    body_bg: '#f3f6f9',
+    dk_primary: '#79a6a8',
+}
+
 const theme = createTheme({
     palette: {
         primary: {
-            main: '#88b3b5',
-            light: '#d1eced',
-            contrastText: '#293a3b',
+            main: Colors.primary,
+            dark: Colors.dk_primary,
+            contrastText: Colors.white,
+            background: Colors.danger,
         },
         secondary: {
-            light: '#8f9cf2',
-            main: '#5b6eeb',
-            contrastText: '#ffcc00'
+            main: Colors.grey,
+            contrastText: Colors.black
         },
         otherColors: {
-            white: '#ebf2f2',
-            black: '#161a19',
-            grey: '#bbbfbf',
-            background: '#d0d8dc',
-            danger: "#db301d",
-            success: "#4caf50",
+            main: Colors.success
         }
     },
 
-    components: {
-        Button: {
-            defaultProps: {
-                disableRipple: true,
-                dispatchEvent: true
-            }
-        }
-    }
+    // components: {
+    //     Button: {
+    //         defaultProps: {
+    //             disableRipple: true,
+    //             dispatchEvent: true
+    //         }
+    //     }
+    // }
 });
 
 
