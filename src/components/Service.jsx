@@ -47,9 +47,9 @@ export default function Service() {
                             justifyContent="center"
                         // spacing={20}
                         >
-                            <SectionTitle>
+                            {<SectionTitle>
                                 <MeetingRoomRoundedIcon color="secondary" sx={{ fontSize: 100 }} marginRight="80px" />
-                            </SectionTitle>
+                            </SectionTitle>}
 
 
                             <Grid
@@ -57,7 +57,7 @@ export default function Service() {
                                 // xs={12} sm={9} md={10} 
                             >
                                 <Bodytext>
-                                    <h4>Drop-In Visits</h4>
+                                    <h2>Drop-In Visits</h2>
                                     <h6>Come to your home and take care of your pet while you're away. They will play with your pets, offer food and water, give potty breaks or clean the litter box, and provide any other necessary care.</h6>
                                 </Bodytext>
                             </Grid>

@@ -25,20 +25,7 @@ root.render(
 // };
 
 // const theme = createTheme({
-//     // palette: {
-//     //     primary: {
-//     //         main: '#ce93d8',
-//     //         light: '#dca1e6',
-//     //         contrastText: '#fef5ff'
-//     //     },
-//     //     secondary: {
-//     //         light: '0066ff',
-//     //         main: '#0044ff',
-//     //         contrastText: '#ffcc00'
-//     //     },
-//     //     success: "#4caf50",
-//     //     danger: "#ff5722"
-//     // },
+
 // });
 
 // export default theme;

@@ -1,5 +1,5 @@
 import IntroTitle from "./styled/Button"
-import Button from '@mui/material/Button';
+import {CustomButton} from './styled/Button';
 import {IntroText, IntroButtonContainer, ButtonContainer } from './styled/StyledIntro'
 
 
@@ -11,12 +11,8 @@ export default function ButtonGroup() {
                 <h1>What would you like to do?</h1>
             </IntroText>
             <ButtonContainer>
-                <Button text="Schedule a Service" onClick={() => {
-                    alert('clicked');
-                }} />
-                <Button text="Post Job For Free" onClick={() => {
-                    alert('clicked');
-                }} />
+                <CustomButton onClick={() => {alert('clicked');}}>Schedule a Service</CustomButton>
+                <CustomButton onClick={() => {alert('clicked');}}>Post Job For Free</CustomButton>
             </ButtonContainer>
         </IntroButtonContainer>
     )

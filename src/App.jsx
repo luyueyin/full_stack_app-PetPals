@@ -11,7 +11,7 @@ import Intro from './components/SlidingAd';
 import ButtonGroup from './components/ButtonGroup'
 import Service from './components/Service';
 
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 
 function App() {
@@ -33,14 +33,14 @@ function App() {
         <ButtonGroup />
         <Service />
 
-        {/* <Router>
-          <Route>
+        <Router>
+          <Routes>
             <Route path='/' exact />
             <Route path='/petparent' element={<PetParent />} />
             <Route path='/petsitter' element={<PetSitter />}/>
-          </Route>
+          </Routes>
         </Router>
-         */}
+        
       </Container>
     </ThemeProvider>
   );

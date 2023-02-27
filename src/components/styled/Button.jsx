@@ -1,48 +1,59 @@
 import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
-import { ThemeProvider, Typography, styled } from '@mui/material/styles';
-import theme, { Colors } from "./Theme"
+import { ThemeProvider, styled } from '@mui/material/styles';
+import theme from "./Theme"
 
 
-export default function StyledButton(props) {
 
 
-    // const CustomButton = styled()(({ theme }) => ({
-    //     borderRadius: 25,
-    //     padding: '10px 50px 10px 50px',
-    //     fontSize: '15px',
-    //     textTransform: 'none',
-    //     color: Colors.white,
-    //     backgroundColor: Colors.secondary,
-    //     textSpacing: '30'
-
-    // }))
-
-
-    const StyleButton = styled(Button)(({ theme }) => ({
-        borderRadius: 25,
-        padding: '10px 50px 10px 50px',
-        fontSize: '15px',
+export const CustomButton = styled(Button)({
+        borderRadius: 50,
+        padding: '10px 60px 10px 60px',
+        fontSize: '18px',
         textTransform: 'none',
-        color: Colors.white,
-        backgroundColor: Colors.secondary,
-        textSpacing: '30'
-    }));
+        color: 'palette.success',
+        backgroundColor: 'primary',
+        textSpacing: '35',
+        variant: "contained",
+        "&:hover": {
+            backgroundColor: 'secondary',
+        },
+        "&:disabled": {
+            backgroundColor: 'success',
+            color: 'white'
+        }
 
-    return (
-        <stack spacing={5}>
-            <Stack spacing={9} direction="row">
-                <ThemeProvider theme={theme}>
-                    <Button
-                        variant="contained"
-                        onClick={props.onClick}
-                        style={StyledButton}
-                        theme={theme}
-                    >
-                        {props.text}
-                    </Button>
-                </ThemeProvider>
-            </Stack>
-        </stack>
-    );
-}
+    });
+
+
+// export default function StyledButton(props) {
+
+
+//     const StyleButton = styled(Button)({
+//         borderRadius: 25,
+//         padding: '10px 50px 10px 50px',
+//         fontSize: '15px',
+//         textTransform: 'none',
+//         color: Colors.white,
+//         backgroundColor: Colors.secondary,
+//         textSpacing: '30'
+//     });
+
+//     return (
+//         <stack spacing={5}>
+//             <Stack spacing={9} direction="row">
+//                 <ThemeProvider theme={theme}>
+//                     <StyleButton
+//                         variant="contained"
+//                         onClick={props.onClick}
+//                         style={StyleButton}
+//                         theme={theme}
+
+//                     >
+//                         {props.text}
+//                     </StyleButton>
+//                 </ThemeProvider>
+//             </Stack>
+//         </stack>
+//     );
+// }

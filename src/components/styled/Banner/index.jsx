@@ -1,6 +1,6 @@
 import { styled } from "@mui/material/styles";
 import { Box, Typography } from "@mui/material";
-import theme, { Colors } from '../Theme';
+import theme from '../Theme';
 
 export const BannerContainer = styled(Box)(() => ({
     display: 'flex',
@@ -8,7 +8,7 @@ export const BannerContainer = styled(Box)(() => ({
     width: '100%',
     height: '100%',
     padding: '0px 0px',
-    background: Colors.darf,
+    backgroundColor: 'primary',
     [theme.breakpoints.down('sm')]: {
         flexDirection: 'column',
         alignItems: 'center',

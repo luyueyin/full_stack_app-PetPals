@@ -1,30 +1,25 @@
 import { createTheme } from '@mui/material/styles';
 
-export const Colors = {
-    primary: '#ce93d8',
-    secondary: '#88b3b5',
-    white: '#FFF',
-    darf: '#edcef0',
-    light: '#f5f5f5',
-    grey: '#a8a8a8',
-    background: '#d0d8dc',
-    inverse: '#3f3d4a',
-    success: "#4caf50",
-    danger: "#ff5722"
-};
-
 const theme = createTheme({
     palette: {
         primary: {
-            main: Colors.primary,
-            light: '#dca1e6',
-            contrastText: '#fef5ff'
+            main: '#88b3b5',
+            light: '#d1eced',
+            contrastText: '#293a3b',
         },
         secondary: {
-            // light: '0086ff',
-            main: Colors.secondary,
-            // contrastText: '#ffcc00'
+            light: '#8f9cf2',
+            main: '#5b6eeb',
+            contrastText: '#ffcc00'
         },
+        otherColors: {
+            white: '#ebf2f2',
+            black: '#161a19',
+            grey: '#bbbfbf',
+            background: '#d0d8dc',
+            danger: "#db301d",
+            success: "#4caf50",
+        }
     },
 
     components: {

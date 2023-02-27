@@ -1,5 +1,5 @@
 import { Grid, Box, styled, Typography } from "@mui/material";
-import theme, { Colors } from "./Theme"
+import theme from "./Theme"
 
 
 export const IntroContainer = styled(Box)(({ theme }) => ({
@@ -10,7 +10,7 @@ export const IntroContainer = styled(Box)(({ theme }) => ({
     justifyContent: 'center',
     alignItems: 'center',
     padding: '20px 0px 20px 0px',
-    background: Colors.background
+    background: 'background'
 }))
 
 export const IntroText = styled(Typography)(({ theme }) => ({
@@ -18,7 +18,7 @@ export const IntroText = styled(Typography)(({ theme }) => ({
     [theme.breakpoints.up('md')]: {
         fontSize: '1.7rem',
     },
-    color: Colors.success,
+    color: 'secondary',
     fontSize: '1.2rem',
     textAlign: 'center',
     maxWidth: '80%',
@@ -37,7 +37,7 @@ export const IntroButtonContainer = styled(Box)(({ theme }) => ({
     justifyContent: 'center',
     alignItems: 'center',
     // padding: '20px 20px 20px 0px',
-    background: Colors.light
+    background: 'light'
 }))
 
 
@@ -67,7 +67,7 @@ export const ServiceContainer = styled(Box)(({ theme }) => ({
     justifyContent: 'center',
     alignItems: 'center',
     padding: '70px',
-    background: Colors.light
+    background: 'light'
 }))
 
 
@@ -79,7 +79,7 @@ export const Bodytext = styled(Typography)(({ theme }) => ({
         maxWidth: '900px',
         textAlign: 'left',
     },
-    color: Colors.success,
+    color: 'success',
     fontSize: '1.9rem',
     textAlign: 'center',
 

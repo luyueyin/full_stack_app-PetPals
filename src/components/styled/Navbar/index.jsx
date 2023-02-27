@@ -1,7 +1,7 @@
 import { List, Typography } from "@mui/material";
 import { styled  } from "@mui/material/styles"
 import { Box } from "@mui/material"
-import { Colors } from '../Theme';
+import { theme } from '../Theme';
 import '@fontsource/montez';
 
 export const NavbarContainer = styled(Box)(() => ({
@@ -14,7 +14,7 @@ export const NavbarHeader = styled(Typography)(() => ({
     fontSize: '4em',
     flexGrow: 1,
     fontFamily: "Montez",
-    color: Colors.primary
+    color: 'primary'
 }))
 
 export const NavList = styled(List)(({ type }) => ({
