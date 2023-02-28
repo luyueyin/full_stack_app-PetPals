@@ -1,5 +1,4 @@
 import { createContext, useState, useContext } from "react";
-
 export const NavContext= createContext();
 export const useNavContext = () => useContext(NavContext);
 

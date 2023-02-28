@@ -1,6 +1,6 @@
 import CustomizedButtons from "./styled/Button"
 import StyledButton from './styled/Button';
-import { IntroButtonContainer, ButtonContainer } from './styled/StyledIntro'
+import { IntroButtonContainer, ButtonContainer } from './styled/StyledContainer'
 import Stack from '@mui/material/Stack';
 import { Bodytext } from './styled/Font';
 

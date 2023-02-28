@@ -4,11 +4,8 @@ import theme from '../components/styled/Theme';
 import { Outlet } from "react-router-dom";
 
 import { NavProvider } from '../components/Navbar/NavProvider';
-import AppDrawer from '../components/drawer'
-import Navbar from '../components/Navbar'
-
 import Banner from '../components/Banner';
-import Footer from '../components/footer'
+import Footer from '../components/Footer'
 import Intro from '../components/SlidingAd';
 import ButtonGroup from '../components/ButtonGroup'
 import Service from '../components/Service';
@@ -21,8 +18,6 @@ const Home = () => {
     return (
         <Container maxWidth="1800px" sx={{ background: '#daf1f7', }}>
             <NavProvider>
-                {/* <Navbar /> */}
-                
                 <Banner />
                 <Intro />
                 <ButtonGroup />

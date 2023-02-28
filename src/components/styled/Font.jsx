@@ -6,8 +6,5 @@ export const Bodytext = styled(Typography)(({ theme }) => ({
     },
     fontSize: '1.9rem',
     textAlign: 'center',
-    fontFamily: [
-        '"cursive","Segoe UI Symbol"',
-    ],
     // lineHeight: '2.5rem',
 }))

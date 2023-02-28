@@ -1,4 +1,4 @@
-import { Grid, Box, styled, Typography } from "@mui/material";
+import { Box, styled } from "@mui/material";
 import theme, {Colors} from "./Theme"
 
 

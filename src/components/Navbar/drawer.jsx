@@ -1,8 +1,8 @@
 import { Divider, Drawer, List, ListItemButton } from "@mui/material"
 import { styled } from '@mui/system';
-import { useNavContext } from './Navbar/NavProvider'
-import { DrawerCloseButton } from './styled/Navbar'
-import theme, { Colors } from './styled/Theme'
+import { useNavContext } from './NavProvider'
+import { DrawerCloseButton } from '../styled/Navbar'
+import theme, { Colors } from '../styled/Theme'
 import CloseIcon from '@mui/icons-material/Close';
 import { lighten } from 'polished';
 import DoorbellIcon from '@mui/icons-material/Doorbell';
@@ -18,7 +18,6 @@ const MiddleDivider = styled((props) => (
 
 export default function AppDrawer() {
     const { drawerOpen, setDrawerOpen } = useNavContext()
-
 
     return (
         <>

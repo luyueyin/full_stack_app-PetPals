@@ -1,19 +1,11 @@
 import { ListItemText, Typography } from "@mui/material";
-import { NavList, NavbarContainer, NavbarHeader } from "../styled/Navbar";
+import { NavList, NavbarContainer, NavbarHeader, StyledLink } from "../styled/Navbar";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Colors } from '../styled/Theme'
 
 
 
-const StyledLink = ({to, children}) => {
-    return (
-        <Link 
-            to={to}
-            style= {{ textDecoration: 'none', color: Colors.black, fontSize: '1.2rem'}}
-        > {children}</Link>
-    )
-}
 
 export default function NavbarDesktop({ matches }) {
 

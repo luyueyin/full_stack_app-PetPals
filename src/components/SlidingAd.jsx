@@ -1,6 +1,6 @@
 import { Slide } from "@mui/material";
 import { useEffect, useState } from "react"
-import { IntroContainer } from "./styled/StyledIntro"
+import { IntroContainer } from "./styled/StyledContainer"
 import { Bodytext } from './styled/Font';
 
 

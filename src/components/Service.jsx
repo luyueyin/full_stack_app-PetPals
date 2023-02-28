@@ -1,4 +1,4 @@
-import { IntroButtonContainer, ServiceContainer } from './styled/StyledIntro'
+import { IntroButtonContainer, ServiceContainer } from './styled/StyledContainer'
 import MeetingRoomRoundedIcon from '@mui/icons-material/MeetingRoomRounded';
 import DirectionsCarRoundedIcon from '@mui/icons-material/DirectionsCarRounded';
 // import Stack from '@mui/material/Stack';

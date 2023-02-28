@@ -3,6 +3,8 @@ import MenuIcon from '@mui/icons-material/Menu'
 import { NavbarContainer, NavbarHeader } from "../styled/Navbar";
 import { useNavContext } from "./NavProvider";
 import { Colors } from '../styled/Theme'
+import { Link } from "react-router-dom";
+import { setDrawerOpen } from '../Navbar/drawer';
 
 export default function NavbarMobile({ matches }) {
     const { setDrawerOpen } = useNavContext()
@@ -10,7 +12,7 @@ export default function NavbarMobile({ matches }) {
     return (
         <NavbarContainer>
             <NavbarHeader variant="h5">Petpels</NavbarHeader>
-            <IconButton size='large' onClick={() => setDrawerOpen(true)} >
+            <IconButton size='large' onClick={() => setDrawerOpen(false)} >
                 <MenuIcon sx={{ fontSize: "2.1rem", color: Colors.black}} />
             </IconButton>
         </NavbarContainer>
