@@ -1,5 +1,6 @@
 import PetParent from './Pages/Petparent';
 import PetSitter from './Pages/Petsitter';
+import Home from './Pages/Home';
 import { useEffect } from 'react';
 
 import Navbar from './components/Navbar'
@@ -12,13 +13,17 @@ import ButtonGroup from './components/ButtonGroup'
 import Service from './components/Service';
 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { Button } from '@mui/material';
+import { Button, Switch } from '@mui/material';
+import Footer from './components/footer'
+import AppDrawer from './components/drawer'
+import { NavProvider } from './components/Navbar/NavProvider';
+
 
 
 function App() {
-  useEffect(() => {
-    document.title = "Petpals - Home";
-  }, []);
+  // useEffect(() => {
+  //   document.title = "Petpals - Home";
+  // }, []);
 
   return (
     <ThemeProvider theme={theme}>
@@ -28,21 +33,27 @@ function App() {
           background: '#daf1f7',
         }}
       >
-        <Navbar />
-        <Banner />
+        <NavProvider>
+          <AppDrawer />
+          <Navbar />
+          <Banner />
+        </NavProvider>
+
+        {/* 
         <Intro />
         <ButtonGroup />
-        <Service />
+        <Service /> */}
 
-        <Router>
-          <Routes>
-            <Route path='/' exact />
-            <Route path='/petparent' element={<PetParent />} />
-            <Route path='/petsitter' element={<PetSitter />}/>
-          </Routes>
-        </Router>
-        <Button variant='contained'>Text</Button>
-        
+        {/* <Router>
+          <Switch>
+            <Route exact from='/' render={props => <Home {...props} />} />
+            <Route exact path='/petparent' render={props => <PetParent {...props} />} />
+            <Route exact path='/petsitter' render={props => <PetSitter {...props} />} />
+          </Switch>
+        </Router> */}
+
+        {/* <Footer /> */}
+
       </Container>
     </ThemeProvider>
   );

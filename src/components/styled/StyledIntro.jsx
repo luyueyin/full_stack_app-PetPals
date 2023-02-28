@@ -42,7 +42,7 @@ export const ServiceContainer = styled(Box)({
     flexDirection: 'column',
     justifyContent: 'left',
     alignItems: 'left',
-    padding: '10%',
+    padding: '2% 10%',
     background: 'green',
     width: '80%',
 })

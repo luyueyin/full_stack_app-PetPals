@@ -1,4 +1,4 @@
-import { createTheme } from '@mui/material/styles';
+import { createTheme, lighten } from '@mui/material/styles';
 
 export const Colors = {
     primary: '#88b3b5',
@@ -30,14 +30,20 @@ const theme = createTheme({
         }
     },
 
-    // components: {
-    //     Button: {
-    //         defaultProps: {
-    //             disableRipple: true,
-    //             dispatchEvent: true
-    //         }
-    //     }
-    // }
+    components: {
+        MuiDrawer: {
+            styleOverrides: {
+                paper: {
+                    width: 250,
+                    background: Colors.secondary,
+                    color: Colors.danger,
+                    borderRadius: '0px 100px 0px 0px',
+                    borderRight:`2px solid ${Colors.success}`
+                }
+            }
+        },
+
+    }
 });
 
 

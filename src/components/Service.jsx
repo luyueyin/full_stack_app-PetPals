@@ -54,7 +54,7 @@ export default function Service() {
             </Bodytext>
 
             {/* 1 */}
-            <ServiceContainer justify="flex-end">
+            <ServiceContainer>
                 <Stack
                     direction={{ xs: 'column', md: 'row' }}
                     backgroundColor={Colors.dk_primary}
@@ -162,9 +162,7 @@ export default function Service() {
                 <Stack
                     direction={{ xs: 'column', md: 'row' }}
                     backgroundColor={Colors.dk_primary}
-                    margin={'30px'}
                     spacing={{ sm: -4, md: 8 }}
-                    // padding={'8px 40px'}
                     borderRadius={'30px'}
                     alignItems={'center'}
                     justifyContent={'left'}
