@@ -1,10 +1,12 @@
 import { Grid, Box, styled, Typography } from "@mui/material";
 import theme, {Colors} from "./Theme"
 import Stack from '@mui/material/Stack';
+import { Maximize } from "@mui/icons-material";
 
 export const IntroContainer = styled(Box)(({ theme }) => ({
     [theme.breakpoints.up('md')]: {
-        padding: '40px 0px 40px 0px'
+        padding: '40px 0px 40px 0px',
+        maxwidth: '1400px',
     },
     display: 'flex',
     justifyContent: 'center',

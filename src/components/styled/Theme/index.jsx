@@ -1,4 +1,5 @@
-import { createTheme, lighten } from '@mui/material/styles';
+import { createTheme } from '@mui/material/styles';
+import { lighten } from 'polished';
 
 export const Colors = {
     primary: '#88b3b5',
@@ -33,13 +34,21 @@ const theme = createTheme({
     components: {
         MuiDrawer: {
             styleOverrides: {
+
                 paper: {
-                    width: 250,
-                    background: Colors.secondary,
-                    color: Colors.danger,
-                    borderRadius: '0px 150px 0px 0px',
-                    borderRight:`0.5px solid ${Colors.black}`,
-                
+                    height: 'auto',
+                    width: '100%',
+                    background: Colors.primary,
+                    borderRadius: '0px 170px 0px 0px',
+                    borderTop: `2px solid ${Colors.secondary}`,
+                    padding: '20px 30px 30px 30px',
+                },
+            }
+        },
+        MuiDivider: {
+            styleOverrides: {
+                root: {
+                    borderColor: lighten(0.2, Colors.primary)
                 }
             }
         },

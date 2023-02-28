@@ -18,6 +18,10 @@ const message = [
     "Provide transportation for your pet to and from appointments, such as vet visits."
 ]
 
+const title = [
+    "Drop-In Visits", "Drop-In Visits,", "Drop-In Visits"
+]
+
 
 // const Services = styled(Stack)(({ theme }) => ({
 //     [theme.breakpoints.up('sm')]: {
@@ -53,32 +57,35 @@ export default function Service() {
                 <h1>Why us ?</h1>
             </Bodytext>
 
-            {/* 1 */}
+
             <ServiceContainer>
+
+                {/* 1 */}
                 <Stack
                     direction={{ xs: 'column', md: 'row' }}
                     backgroundColor={Colors.dk_primary}
-                    marginTop={'80px'}
+                    margin={'30px'}
                     spacing={{ sm: -4, md: 8 }}
                     padding={'8px 40px'}
                     borderRadius={'30px'}
                     alignItems={'center'}
-                    justifyContent={'left'}
+                    justifyContent={'flex-start'}
                     Width={'100%'}
                 >
                     <Stack
                         alignItems={'center'}
-                        justifyContent={'center'}
+                        justifyContent={'flex-start'}
                         marginTop={'50px'}
                         spacing={{ sm: -3, md: -2 }}
                     >
                         <MeetingRoomRoundedIcon color="" sx={{ fontSize: 60, width: 200 }} />
-                        <Bodytext><h4>Drop-In Visits</h4></Bodytext>
+                        <Bodytext><h4>Drop-In Visits"</h4></Bodytext>
                     </Stack>
                     <Bodytext textAlign={{ sm: 'center', md: 'left' }}>
                         <h6>{message[0]}</h6>
                     </Bodytext>
                 </Stack>
+
 
                 {/* 2 */}
                 <Stack
@@ -106,6 +113,7 @@ export default function Service() {
                     </Bodytext>
                 </Stack>
 
+
                 {/* 3 */}
                 <Stack
                     direction={{ xs: 'column', md: 'row' }}
@@ -132,8 +140,9 @@ export default function Service() {
                     </Bodytext>
                 </Stack>
 
+
                 {/* 4 */}
-                <Stack
+                {/* <Stack
                     direction={{ xs: 'column', md: 'row' }}
                     backgroundColor={Colors.dk_primary}
                     margin={'30px'}
@@ -156,10 +165,10 @@ export default function Service() {
                     <Bodytext textAlign={{ sm: 'center', md: 'left' }}>
                         <h6>{message[3]}</h6>
                     </Bodytext>
-                </Stack>
+                </Stack> */}
 
                 {/* 5 */}
-                <Stack
+                {/* <Stack
                     direction={{ xs: 'column', md: 'row' }}
                     backgroundColor={Colors.dk_primary}
                     spacing={{ sm: -4, md: 8 }}
@@ -180,7 +189,7 @@ export default function Service() {
                     <Bodytext textAlign={{ sm: 'center', md: 'left' }}>
                         <h6>{message[4]}</h6>
                     </Bodytext>
-                </Stack>
+                </Stack> */}
             </ServiceContainer>
         </IntroButtonContainer >
 
