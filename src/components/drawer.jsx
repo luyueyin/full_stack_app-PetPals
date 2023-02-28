@@ -6,14 +6,12 @@ import { useNavContext } from './Navbar/NavProvider'
 import { DrawerCloseButton } from './styled/Navbar'
 import { Colors } from './styled/Theme'
 import CloseIcon from '@mui/icons-material/Close';
+
+
 import { lighten } from 'polished';
 
+import SpeedDialIcon from '@mui/material/SpeedDialIcon';
 
-// const useStyles = makeStyles({
-//     AppDrawer: {
-//         width: "500px",
-//     }
-// })
 
 const MiddleDivier = styled(() => (
     <Divider variant="middle" />
@@ -23,16 +21,21 @@ const MiddleDivier = styled(() => (
 export default function AppDrawer() {
 
     const { drawerOpen, setDrawerOpen } = useNavContext()
-    // const classes = useStyles();
+
 
     return (
         <>
             {drawerOpen && (
                 <DrawerCloseButton onClick={() => setDrawerOpen(false)}>
-                    <CloseIcon 
+                    <CloseIcon
                         sx={{
-                            fontSize: '2.8rem',
-                            color: lighten(0.1, Colors.secondary),
+                            fontSize: '2.6rem',
+                            color: lighten(0.2, Colors.primary),
+                            transition: 'transform 0.3s ease-in-out',
+                            '&:hover': {
+                                transform: 'rotate(135deg)',
+                                
+                            },
                         }}
                     />
                 </DrawerCloseButton>

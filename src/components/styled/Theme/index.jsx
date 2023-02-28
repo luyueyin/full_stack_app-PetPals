@@ -22,7 +22,7 @@ const theme = createTheme({
             background: Colors.danger,
         },
         secondary: {
-            main: Colors.grey,
+            main: Colors.secondary,
             contrastText: Colors.black
         },
         otherColors: {
@@ -37,8 +37,9 @@ const theme = createTheme({
                     width: 250,
                     background: Colors.secondary,
                     color: Colors.danger,
-                    borderRadius: '0px 100px 0px 0px',
-                    borderRight:`2px solid ${Colors.success}`
+                    borderRadius: '0px 150px 0px 0px',
+                    borderRight:`0.5px solid ${Colors.black}`,
+                
                 }
             }
         },

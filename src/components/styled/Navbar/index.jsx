@@ -10,6 +10,7 @@ import { Box } from "@mui/material"
 import { theme } from '../Theme';
 import '@fontsource/montez';
 import { lighten } from 'polished';
+import closeIcon from '@mui/icons-material';
 
 export const NavbarContainer = styled(Box)(() => ({
     display: 'flex',
@@ -36,8 +37,7 @@ export const DrawerCloseButton = styled(IconButton)(() => ({
     position: 'absolute',
     top: 10,
     left: '280px',
-    zIndex: 999,
-    // lighten: '0.09, Colors.secondary'
+    zIndex: 1999,
 }))
 
 
@@ -45,13 +45,9 @@ export const DrawerCloseButton = styled(IconButton)(() => ({
 
 // export default function CloseIcon() {
 //     return (
-//         <Box sx={{ height: 320, transform: 'translateZ(0px)', flexGrow: 1 }}>
-//             <SpeedDial
-//                 ariaLabel="SpeedDial openIcon example"
-//                 sx={{ position: 'absolute', bottom: 16, right: 16 }}
-//                 icon={<SpeedDialIcon openIcon={<CloseIcon />} />}
-//             >
-//             </SpeedDial>
-//         </Box>
-//     );
-// }
+//         <IconButton color="primary" aria-label="upload picture" component="label">
+//         <input hidden accept="image/*" type="file" />
+//         <closeIcon />
+//       </IconButton>
+//     )
+// } 
