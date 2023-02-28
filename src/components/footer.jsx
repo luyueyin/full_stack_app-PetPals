@@ -1,21 +1,25 @@
-import { Box, Typography } from "@mui/material"
-import { Bodytext } from './styled/Font'
+import { Box, Container } from "@mui/material"
+import { Footertext } from './styled/Font'
 import { Colors } from './styled/Theme'
+
 
 export default function Footer() {
     return (
         <Box 
-            // justifyContent="center"
+            // 
             sx={{
-                backgroundColor: Colors.secondary,
-                padding: { xs: 0.5, md: 0.1}
-
+                height: { xs: '10rem', md:'4rem'},
+                width: '100%',
+                justifyContent: "center",
+                alignItems: "center",
+                display: "flex",
+                borderTop: '1px solid gray',
 
             }}
             
             
         >
-            <Bodytext><h6>@ 2023 PetPals</h6></Bodytext>
+            <Footertext>@ 2023 PetPals</Footertext>
         </Box>
     )
 }

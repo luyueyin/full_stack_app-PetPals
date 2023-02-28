@@ -19,7 +19,7 @@ export default function NotFound() {
                     paddingBottom:'7rem',
                 }}>
                         <Typography fontSize={'13rem'} >404</Typography>
-                        <Typography fontSize={'1.8rem'}>Ooops, Page Not Found</Typography>
+                        <Typography fontSize={'1.6rem'}>Ooops, Page Not Found</Typography>
                     </Stack>
 
             </Container>

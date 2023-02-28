@@ -1,6 +1,6 @@
 import { Slide } from "@mui/material";
 import { useEffect, useState } from "react"
-import { IntroContainer } from "./styled/StyledContainer"
+import { StyledContainer } from "./styled/StyledContainer"
 import { Bodytext } from './styled/Font';
 
 
@@ -41,7 +41,7 @@ export default function Intro() {
     }, [])
 
     return (
-        <IntroContainer>
+        <StyledContainer>
             <Slide 
                 direction={showMessage ? "left" : "right"} in={showMessage} timeout={{ enter: 500, exit: 300 }}
             >
@@ -49,6 +49,6 @@ export default function Intro() {
                     {messages[messagesIndex]}
                 </Bodytext>
             </Slide>            
-        </IntroContainer>
+        </StyledContainer>
     )
 }

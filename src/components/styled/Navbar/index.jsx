@@ -11,34 +11,44 @@ import { Link } from 'react-router-dom';
 
 export const NavbarContainer = styled(Box)(() => ({
     display: 'flex',
-    height: '90px',
-    // backgroundColor: 'blue',
-    justifyContent: 'space-between',
+    height: '80px',
+    backgroundColor: 'white',
+    justifyContent: 'center',
+    boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1);',
     alignItems: 'center',
-    margin: 'auto',
+    padding: '0rem 3rem 0.4rem 0rem',
     width: '100%',
-    maxWidth: '1800px',
+    position: 'fixed',
+    top: 0,
+}));
 
+export const NavbarMaxWidth = styled(Box)(() => ({
+    display: 'flex',
+    height: '100%',
+    width: '100%',
+    justifyContent: 'center',
+    alignItems: 'center',
+
+    alignContent: 'center',
+    maxWidth: '1800px',
 }));
 
 export const NavbarHeader = styled(Typography)(({theme}) => ({
     [theme.breakpoints.up('md')]: {
-        fontSize: '4em',
+        fontSize: '3em',
         paddingLeft: '2rem',
     },
-    fontSize: '3em',
+    fontSize: '2.7em',
     flexGrow: 1,
     fontFamily: "Montez",
-    cursor: 'pointer',
     color: Colors.secondary,
 }))
 
-export const NavList = styled(List)(({ type }) => ({
-    display: type === `row` ? 'flex' : 'block',
-    flexGrow: .3,
-    justifyContent: 'space-between',
-    alignItems: 'center',
-}))
+export const NavList = styled(List)({
+    display: 'flex',
+    flexGrow: 3,
+    justifyContent: 'right',
+})
 
 
 export const DrawerCloseButton = styled(IconButton)(() => ({
@@ -53,7 +63,7 @@ export const StyledLink = ({to, children}) => {
     return (
         <Link
             to={to}
-            style= {{ textDecoration: 'none', color: Colors.black, fontSize: '1.2rem'}}
+            style= {{ textDecoration: 'none', color: Colors.black, fontSize: '1.2rem', padding:'2rem' }}
         > {children}</Link>
     )
 }

@@ -46,7 +46,7 @@ function MainPage() {
   return (
     <>
       <Navbar /> 
-      <AppDrawer />
+      {/* <AppDrawer /> */}
       <Outlet />
     </>
   )

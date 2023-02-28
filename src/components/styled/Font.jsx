@@ -8,3 +8,11 @@ export const Bodytext = styled(Typography)(({ theme }) => ({
     textAlign: 'center',
     // lineHeight: '2.5rem',
 }))
+
+export const Footertext = styled(Typography)(({ theme }) => ({
+    [theme.breakpoints.up('md')]: {
+        fontSize: '1rem',
+    },
+    fontSize: '1.5rem',
+    textAlign: 'center',
+}))

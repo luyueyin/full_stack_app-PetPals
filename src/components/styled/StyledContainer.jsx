@@ -2,12 +2,13 @@ import { Box, styled } from "@mui/material";
 import theme, {Colors} from "./Theme"
 
 
-export const IntroContainer = styled(Box)(({ theme }) => ({
+export const StyledContainer = styled(Box)(({ theme }) => ({
     [theme.breakpoints.up('md')]: {
-        padding: '40px 0px 40px 0px',
+        padding: '80px 0px 40px 0px',
         maxwidth: '1400px',
+
     },
-    display: 'flex',
+    display: 'relative',
     justifyContent: 'center',
     alignItems: 'center',
     padding: '20px 0px 20px 0px',

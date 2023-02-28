@@ -16,7 +16,7 @@ const Home = () => {
     }, []);
 
     return (
-        <Container maxWidth="1800px" sx={{ background: '#daf1f7', }}>
+        <Container maxWidth="1800px">
             <NavProvider>
                 <Banner />
                 <Intro />

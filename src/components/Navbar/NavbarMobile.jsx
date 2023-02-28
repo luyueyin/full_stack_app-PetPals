@@ -12,7 +12,7 @@ export default function NavbarMobile({ matches }) {
     return (
         <NavbarContainer>
             <NavbarHeader variant="h5">Petpels</NavbarHeader>
-            <IconButton size='large' onClick={() => setDrawerOpen(false)} >
+            <IconButton size='large' onClick={() => setDrawerOpen(true)} >
                 <MenuIcon sx={{ fontSize: "2.1rem", color: Colors.black}} />
             </IconButton>
         </NavbarContainer>
