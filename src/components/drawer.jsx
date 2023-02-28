@@ -1,6 +1,5 @@
 import { Divider, Drawer, List, ListItemButton } from "@mui/material"
 import { styled } from '@mui/system';
-import MeetingRoomRoundedIcon from '@mui/icons-material/MeetingRoomRounded';
 import { useNavContext } from './Navbar/NavProvider'
 import { DrawerCloseButton } from './styled/Navbar'
 import theme, { Colors } from './styled/Theme'

@@ -1,30 +1,60 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { RouterProvider, Route, Outlet, useNavigate, createBrowserRouter, createRoutesFromElements } from 'react-router-dom';
+import { useEffect, useReducer, useState } from "react"
 import PetParent from './Pages/Petparent';
 import PetSitter from './Pages/Petsitter';
 import Home from './Pages/Home';
+import AppDrawer from './components/drawer';
+import Navbar from './components/Navbar';
 
 import { ThemeProvider } from '@mui/material/styles';
 import theme from './components/styled/Theme';
+import { GlobalContext } from './components/utils/globalStateContext';
+import globalReducer from './components/utils/globalReducer';
+
 
 function App() {
 
+  const initialState = {
+    logedInUserName: '',
+    tokens: '',
+  }
+
+  const [store, dispatch] = useReducer(globalReducer, initialState)
 
   return (
-    <div>
+    <div className='App'>
       <ThemeProvider theme={theme}>
-        <Router>
-          <Routes>
-            <Route path='/' exact element={<Home />}></Route>
+
+
+        <GlobalContext.Provider value={{ store, dispatch }}>
+          <RouterProvider router={router} />
+        </GlobalContext.Provider>
+        {/* <Routes>
             <Route path='/petparent' exact element={<PetParent />}></Route>
             <Route path='/petsitter' exact element={<PetSitter />}></Route>
-            {/* <Route from='/' exact render={props => <Home {...props} />} />
-            <Route exact path='/petparent' render={props => <PetParent {...props} />} />
-            <Route exact path='/petsitter' render={props => <PetSitter {...props} />} /> */}
-          </Routes>
-        </Router>
+          </Routes> */}
+
       </ThemeProvider >
     </div>
   );
+}
+
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <Route path='/' element={<MainPage />}>
+      <Route path='/' exact element={<Home />} />
+      <Route path='/petparent' exact element={<PetParent />} />
+      <Route path='/petsitter' exact element={<PetSitter />} />
+    </Route>)
+)
+
+function MainPage() {
+  return (
+    <>
+      <Navbar /> 
+      <Outlet />
+    </>
+  )
 }
 
 

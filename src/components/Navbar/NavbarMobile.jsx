@@ -4,7 +4,7 @@ import { NavbarContainer, NavbarHeader } from "../styled/Navbar";
 import { useNavContext } from "./NavProvider";
 import { Colors } from '../styled/Theme'
 
-export default function NavbarDesktop({ matches }) {
+export default function NavbarMobile({ matches }) {
     const { setDrawerOpen } = useNavContext()
 
     return (

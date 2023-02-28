@@ -6,11 +6,13 @@ import { Box } from "@mui/material"
 import '@fontsource/montez';
 import theme, {Colors} from "../Theme"
 import curriedAdjustHue from 'polished/lib/color/adjustHue';
+import { Link } from 'react-router-dom';
+
 
 export const NavbarContainer = styled(Box)(() => ({
     display: 'flex',
     height: '90px',
-    backgroundColor: 'blue',
+    // backgroundColor: 'blue',
     justifyContent: 'space-between',
     alignItems: 'center',
     margin: 'auto',
@@ -36,7 +38,6 @@ export const NavList = styled(List)(({ type }) => ({
     flexGrow: .3,
     justifyContent: 'space-between',
     alignItems: 'center',
-    cursor: 'pointer',
 }))
 
 
@@ -45,4 +46,10 @@ export const DrawerCloseButton = styled(IconButton)(() => ({
     bottom: 370,
     right: 15,
     zIndex: 1999,
+}))
+
+
+export const StyledLink = styled(Link)(() => ({
+    color: Colors.secondary,
+    textUnderlineOffset: 0,
 }))
