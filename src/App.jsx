@@ -2,7 +2,7 @@ import { RouterProvider, Route, Outlet, createBrowserRouter, createRoutesFromEle
 import { useEffect, useReducer, useState } from "react"
 import PetParent from './Pages/Petparent';
 import PetSitter from './Pages/Petsitter';
-import Home from './Pages/Home';
+import Mainpage from './Pages/Mainpage';
 import AppDrawer from './components/Navbar/drawer';
 import Navbar from './components/Navbar';
 import NotFound from './components/NotFound';
@@ -11,6 +11,7 @@ import { ThemeProvider } from '@mui/material/styles';
 import theme from './components/styled/Theme';
 import { GlobalContext } from './components/utils/globalStateContext';
 import globalReducer from './components/utils/globalReducer';
+import { NavProvider } from './components/Navbar/NavContext';
 
 
 function App() {
@@ -36,7 +37,7 @@ function App() {
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path='/' element={<Nav />} errorElement={<NotFound />}>
-      <Route path='/' exact element={<Home />} />
+      <Route path='/' exact element={<Mainpage />} />
       <Route path='/petparent' exact element={<PetParent />} />
       <Route path='/petsitter' exact element={<PetSitter />} />
     </Route>)
@@ -45,8 +46,12 @@ const router = createBrowserRouter(
 function Nav() {
   return (
     <>
+    <NavProvider>
+
       <Navbar /> 
-      {/* <AppDrawer /> */}
+      <AppDrawer />
+
+    </NavProvider>
       <Outlet />
     </>
   )

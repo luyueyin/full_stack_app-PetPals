@@ -1,6 +1,6 @@
 import { Divider, Drawer, List, ListItemButton } from "@mui/material"
 import { styled } from '@mui/system';
-import { useNavContext } from './NavProvider'
+import { useNavContext } from './NavContext'
 import { DrawerCloseButton } from '../styled/Navbar'
 import theme, { Colors } from '../styled/Theme'
 import CloseIcon from '@mui/icons-material/Close';
@@ -17,6 +17,7 @@ const MiddleDivider = styled((props) => (
 
 
 export default function AppDrawer() {
+    
     const { drawerOpen, setDrawerOpen } = useNavContext()
 
     return (
@@ -25,12 +26,12 @@ export default function AppDrawer() {
                 <DrawerCloseButton onClick={() => setDrawerOpen(false)}>
                     <CloseIcon
                         sx={{
-                            fontSize: '6rem',
+                            fontSize: '4.3rem',
                             backgroundColor: lighten(0.1, Colors.primary),
                             color: Colors.black,
                             borderRadius: '50%',
-                            padding: '0.7rem',
-                            boxShadow: '0px 5px 10px rgba(0, 0, 0, 0.5)',
+                            padding: '1rem',
+                            boxShadow: '0px 5px 10px rgba(0, 0, 0, 0.3)',
                             transition: 'transform 0.3s ease-in-out',
                             '&:hover': {
                                 transform: 'rotate(135deg)',
@@ -42,7 +43,7 @@ export default function AppDrawer() {
 
             <Drawer open={drawerOpen} anchor="bottom">
                 <List>
-                    <ListItemButton sx={{ padding: '30px 0px 30px 50px' }}>
+                    <ListItemButton sx={{ padding: '20px 0px 30px 50px' }}>
                         <DoorbellIcon sx={{ marginRight: '30px', fontSize: '2.6rem' }} />
                         <Typography variant="h6">Home</Typography>
                     </ListItemButton>

@@ -10,7 +10,7 @@ export const StyledContainer = styled(Box)(({ theme }) => ({
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
-    background: 'lightblue',
+    // background: 'lightblue',
 }))
 
 
@@ -20,7 +20,7 @@ export const ContentContainer = styled(Box)({
     justifyContent: 'center',
     alignItems: 'center',
     padding: '5% 10%',
-    background: Colors.white,
+    // background: Colors.white,
 })
 
 export const ServiceBox = styled(Container)(({ theme }) => ({
@@ -30,15 +30,15 @@ export const ServiceBox = styled(Container)(({ theme }) => ({
         
     },
     direction: 'column',
-    background: Colors.primary,
-    margin: '10px',
+    margin: '20px',
     padding: '8px 40px',
     borderRadius: '30px',
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'left',
     Width: '100px',
-    // maxwidth: '100px',
+    // border: `1px solid ${Colors.black}`,
+    boxShadow: '1px 2px 10px rgba(0, 0, 0, 0.2);',
 }))
 
 

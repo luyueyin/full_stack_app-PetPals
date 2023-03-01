@@ -10,37 +10,46 @@ import { Link } from 'react-router-dom';
 
 
 export const NavbarContainer = styled(Box)(() => ({
-    display: 'absolute',
-    height: '65px',
-    backgroundColor: 'white',
+    display: 'flex',
+    height: '75px',
+    backgroundColor: 'lightgray',
     justifyContent: 'center',
     boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1);',
     alignItems: 'center',
-    padding: '0rem 3rem 0.35rem 0rem',
     width: '100%',
     position: 'fixed',
     top: 0,
-    opacity: 0.8,
+    opacity: 0.85,
+    zIndex: 99,
 }));
 
-export const NavbarMaxWidth = styled(Box)(() => ({
+export const NavbarDesktopWidth = styled(Box)(() => ({
     display: 'flex',
     height: '100%',
     width: '100%',
-    justifyContent: 'center',
+    justifyContent: 'space-between',
     alignItems: 'center',
-
     alignContent: 'center',
     maxWidth: '1800px',
+    paddingRight: '2rem',
+    paddingLeft: '1rem',
 }));
+
+export const NavbarMobileWidth = styled(Box)(() => ({
+    display: 'flex',
+    width: '100%',
+    paddingLeft: '1.8rem',
+    paddingRight: '1rem',
+    // backgroundColor: Colors.primary,
+}));
+
 
 export const NavbarHeader = styled(Typography)(({theme}) => ({
     [theme.breakpoints.up('md')]: {
         fontSize: '2.3em',
-        paddingLeft: '2rem',
     },
     fontSize: '2.7em',
-    flexGrow: 1,
+    flexGrow: 2,
     fontFamily: "Montez",
     color: Colors.secondary,
 }))

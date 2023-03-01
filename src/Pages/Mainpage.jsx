@@ -1,16 +1,14 @@
 import React, { useEffect } from "react";
 import Container from '@mui/material/Container';
 import theme from '../components/styled/Theme';
-import { Outlet } from "react-router-dom";
-
-import { NavProvider } from '../components/Navbar/NavProvider';
+import { NavProvider } from '../components/Navbar/NavContext';
 import Banner from '../components/Banner';
 import Footer from '../components/Footer'
 import Intro from '../components/SlidingAd';
 import ButtonGroup from '../components/ButtonGroup'
 import Service from '../components/Service';
 
-const Home = () => {
+const Mainpage = () => {
     useEffect(() => {
         document.title = "Petpals - Home";
     }, []);
@@ -23,16 +21,10 @@ const Home = () => {
                 <ButtonGroup />
                 <Service />
                 <Footer />
-                <Outlet />
             </NavProvider>
-
-
-
-
-
         </Container >
 
     )
 }
 
-export default Home
+export default Mainpage
