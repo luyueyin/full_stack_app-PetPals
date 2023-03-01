@@ -1,4 +1,4 @@
-import { BannerContainer, BannerContent, BannerDescription, BannerImage, BannerTitle } from '../styled/Banner';
+import { BannerContainer } from '../styled/Banner';
 import { Bodytext } from '../styled/Font';
 import { ContentContainer } from '../styled/StyledContainer';
 import { Colors } from '../styled/Theme'
@@ -10,11 +10,10 @@ import NightsStayIcon from '@mui/icons-material/NightsStay';
 import LocalTaxiIcon from '@mui/icons-material/LocalTaxi';
 import { OptionBox } from '../styled/StyledContainer';
 
-
 import { styled } from '@mui/material/styles';
-import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Unstable_Grid2';
+
 
 const Item = styled(Paper)(({ theme }) => ({
     [theme.breakpoints.up('md')]: {
@@ -82,18 +81,7 @@ export default function FindingSitter() {
                         </Grid>
                     </Grid>
                 </OptionBox>
-
-
-
-
-
-
-
-
             </ContentContainer>
-
-
-
         </BannerContainer>
     )
 }

@@ -1,5 +1,4 @@
 import { Box, Container, styled } from "@mui/material";
-import { Colors } from "./Theme";
 
 export const StyledContainer = styled(Box)(({ theme }) => ({
     [theme.breakpoints.up('md')]: {
@@ -18,7 +17,7 @@ export const ContentContainer = styled(Box)({
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
-    padding: '6% 10%',
+    padding: '7% 10%',
     // background: Colors.white,
 })
 
@@ -26,7 +25,6 @@ export const ServiceBox = styled(Container)(({ theme }) => ({
     [theme.breakpoints.up('md')]: {
         direction: 'row',
         padding: '0px 50px',
-        
     },
     direction: 'column',
     margin: '20px',
@@ -48,8 +46,11 @@ export const IconBox = styled(Box)({
 })
 
 
-export const OptionBox = styled(Box)({
+export const OptionBox = styled(Box)(({ theme }) => ({
+    [theme.breakpoints.up('md')]: {
+        marginTop: 80, 
+    },
     flexGrow: 1, 
     marginTop: 45, 
     maxWidth: '1000px' 
-})
+}))

@@ -19,7 +19,6 @@ const theme = createTheme({
     palette: {
         primary: {
             main: Colors.primary,
-            dark: Colors.dk_primary,
             // contrastText: Colors.white,
             background: Colors.danger,
         },

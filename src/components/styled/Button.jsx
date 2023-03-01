@@ -1,8 +1,9 @@
-import * as React from 'react';
 import { styled } from '@mui/material/styles';
 import Button, { ButtonProps } from '@mui/material/Button';
 import Stack from '@mui/material/Stack';
-import theme from '../styled/Theme'
+import theme from './Theme'
+import { Colors } from './Theme';
+import { lighten } from 'polished';
 
 const BootstrapButton = styled(Button)({
     textTransform: 'none',
@@ -17,14 +18,16 @@ const BootstrapButton = styled(Button)({
         '"Segoe UI Symbol"',
     ].join(','),
     '&:hover': {
-        backgroundColor: 'secondary',
+        backgroundColor: Colors.primary,
         borderColor: 'secondary',
     },
-    // '&:active': {
-    //     backgroundColor: 'primary',
-    // },
+
+    '&:active': {
+        backgroundColor: lighten(1, Colors.primary),
+    },
+
     // '&:focus': {
-    //     boxShadow: '0 0 0 0.2rem rgba(0,123,255,.3)',
+    //     boxShadow: '0 0 0 0.1rem rgba(0,123,255,.3)',
     // },
 });
 
@@ -37,5 +40,17 @@ export default function CustomizedButtons(props) {
             </BootstrapButton>
         </Stack>
     );
-}
+};
 
+
+
+
+export const SelectionButton = styled(Button)(({ props }) => ({
+
+    padding: '80px 0px 40px 0px',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
+    background: 'lightblue',
+}))
