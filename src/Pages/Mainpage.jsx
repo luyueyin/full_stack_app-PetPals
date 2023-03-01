@@ -1,12 +1,11 @@
 import React, { useEffect } from "react";
 import Container from '@mui/material/Container';
-import theme from '../components/styled/Theme';
 import { NavProvider } from '../components/Navbar/NavContext';
-import Banner from '../components/Banner';
-import Footer from '../components/Footer'
-import Intro from '../components/SlidingAd';
-import ButtonGroup from '../components/ButtonGroup'
-import Service from '../components/Service';
+import Banner from '../components/Home/Banner';
+import Footer from '../components/Home/Footer'
+import Intro from '../components/Home/SlidingAd';
+import ButtonGroup from '../components/Home/ButtonGroup'
+import Service from '../components/Home/Service';
 
 const Mainpage = () => {
     useEffect(() => {
@@ -20,7 +19,6 @@ const Mainpage = () => {
                 <Intro />
                 <ButtonGroup />
                 <Service />
-                <Footer />
             </NavProvider>
         </Container >
 

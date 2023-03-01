@@ -3,11 +3,11 @@ import { Colors } from "./Theme";
 
 export const Bodytext = styled(Typography)(({ theme }) => ({
     [theme.breakpoints.up('md')]: {
-        fontSize: '1.6rem',
+        fontSize: '1.5rem',
     },
-    fontSize: '1.9rem',
+    fontSize: '1.8rem',
     textAlign: 'center',
-    lineHeight: '5.2rem',
+    // lineHeight: '2rem',
 }))
 
 export const Footertext = styled(Typography)(({ theme }) => ({
@@ -18,11 +18,35 @@ export const Footertext = styled(Typography)(({ theme }) => ({
     textAlign: 'center',
 }))
 
-export const Icontext = styled(Typography)(({ theme }) => ({
+export const IconTitle = styled(Typography)(({ theme }) => ({
     [theme.breakpoints.up('md')]: {
-        fontSize: '1.5rem',
+        fontSize: '1.6rem',
+        marginLeft: '1.5rem',
     },
     marginLeft: '1rem',
+    fontSize: '1.2rem',
+    fontWeight: 'lighter',
+    color: Colors.black
+}))
+
+export const StepTitle = styled(Typography)(({ theme }) => ({
+    [theme.breakpoints.up('md')]: {
+        fontSize: '1.6rem',
+    },
+    marginTop: '.5rem',
+    fontSize: '1.2rem',
+    fontWeight: 'bold',
+    color: Colors.black
+}))
+
+export const Icontext = styled(Typography)(({ theme }) => ({
+    [theme.breakpoints.up('md')]: {
+        fontSize: '1.2rem',
+        marginLeft: '1.5rem',
+    },
+    marginTop: '1.1rem',
     fontSize: '1rem',
+    fontWeight: 'lighter',
+    textAlign: 'center',
     color: Colors.black
 }))

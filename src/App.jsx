@@ -5,13 +5,14 @@ import PetSitter from './Pages/Petsitter';
 import Mainpage from './Pages/Mainpage';
 import AppDrawer from './components/Navbar/drawer';
 import Navbar from './components/Navbar';
-import NotFound from './components/NotFound';
+import NotFound from './Pages/NotFound';
 
 import { ThemeProvider } from '@mui/material/styles';
 import theme from './components/styled/Theme';
 import { GlobalContext } from './components/utils/globalStateContext';
 import globalReducer from './components/utils/globalReducer';
 import { NavProvider } from './components/Navbar/NavContext';
+import Footer from './components/Home/Footer';
 
 
 function App() {
@@ -46,13 +47,12 @@ const router = createBrowserRouter(
 function Nav() {
   return (
     <>
-    <NavProvider>
-
-      <Navbar /> 
-      <AppDrawer />
-
-    </NavProvider>
-      <Outlet />
+      <NavProvider>
+        <Navbar />
+        <AppDrawer />
+        <Outlet />
+        <Footer />
+      </NavProvider>
     </>
   )
 }

@@ -1,15 +1,16 @@
-import { BannerContainer, BannerContent, BannerDescription, BannerImage, BannerTitle } from "./styled/Banner"
-import { Bodytext } from './styled/Font'
-import { ContentContainer, StyledContainer, ServiceBox, IconBox } from './styled/StyledContainer'
-import { Colors } from './styled/Theme'
+import { BannerContainer, BannerContent, BannerDescription, BannerImage, BannerTitle } from '../styled/Banner';
+import { Bodytext } from '../styled/Font';
+import { ContentContainer } from '../styled/StyledContainer';
+import { Colors } from '../styled/Theme'
 import MapsHomeWorkIcon from '@mui/icons-material/MapsHomeWork';
-import { Icontext } from './styled/Font'
+import { IconTitle } from '../styled/Font'
 import BlindIcon from '@mui/icons-material/Blind';
 import LightModeIcon from '@mui/icons-material/LightMode';
 import NightsStayIcon from '@mui/icons-material/NightsStay';
 import LocalTaxiIcon from '@mui/icons-material/LocalTaxi';
+import { OptionBox } from '../styled/StyledContainer';
 
-import * as React from 'react';
+
 import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
@@ -22,13 +23,13 @@ const Item = styled(Paper)(({ theme }) => ({
         justifyItems: 'center',
         alignItems: 'center',
         height: 170,
-
     },
     padding: theme.spacing(4.3),
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
     color: Colors.black,
+    backgroundColor: Colors.white,
     borderRadius: 30,
     height: 110,
 }));
@@ -43,44 +44,44 @@ export default function FindingSitter() {
                     <h1>Let's find your perfect pet sitter</h1>
                 </Bodytext>
 
-                <Box sx={{ flexGrow: 1, marginTop: 8 }}>
+                <OptionBox>
                     <Grid container spacing={2}>
                         <Grid xs={6} md={4}>
                             <Item>
                                 <LightModeIcon fontSize='large' />
-                                <Icontext>Day Care</Icontext>
+                                <IconTitle>Day Care</IconTitle>
                             </Item>
                         </Grid>
 
                         <Grid xs={6} md={4}>
                             <Item>
                                 <NightsStayIcon fontSize='large' />
-                                <Icontext>Overnight Care</Icontext>
+                                <IconTitle>Overnight Care</IconTitle>
                             </Item>
                         </Grid>
 
                         <Grid xs={6} md={4}>
                             <Item>
                                 <LocalTaxiIcon fontSize='large' />
-                                <Icontext>Pet Taxi</Icontext>
+                                <IconTitle>Pet Taxi</IconTitle>
                             </Item>
                         </Grid>
 
                         <Grid xs={6} md={6}>
                             <Item>
                                 <BlindIcon fontSize='large' />
-                                <Icontext>Dog Walking</Icontext>
+                                <IconTitle>Dog Walking</IconTitle>
                             </Item>
                         </Grid>
 
                         <Grid xs={12} md={6}>
                             <Item>
                                 <MapsHomeWorkIcon fontSize='large' />
-                                <Icontext>Drop-In Visits</Icontext>
+                                <IconTitle>Drop-In Visits</IconTitle>
                             </Item>
                         </Grid>
                     </Grid>
-                </Box>
+                </OptionBox>
 
 
 

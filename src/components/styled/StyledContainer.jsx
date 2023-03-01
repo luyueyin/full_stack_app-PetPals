@@ -25,7 +25,7 @@ export const ContentContainer = styled(Box)({
 export const ServiceBox = styled(Container)(({ theme }) => ({
     [theme.breakpoints.up('md')]: {
         direction: 'row',
-        padding: '30px 50px',
+        padding: '0px 50px',
         
     },
     direction: 'column',
@@ -47,3 +47,9 @@ export const IconBox = styled(Box)({
     marginRight: '1rem',
 })
 
+
+export const OptionBox = styled(Box)({
+    flexGrow: 1, 
+    marginTop: 45, 
+    maxWidth: '1000px' 
+})

@@ -1,8 +1,8 @@
-import CustomizedButtons from "./styled/Button"
-import StyledButton from './styled/Button';
-import { StyledContainer } from './styled/StyledContainer'
+import CustomizedButtons from "../styled/Button"
+import StyledButton from '../styled/Button';
+import { StyledContainer } from '../styled/StyledContainer'
 import Stack from '@mui/material/Stack';
-import { Bodytext } from './styled/Font';
+import { Bodytext } from '../styled/Font';
 
 export default function ButtonGroup() {
 

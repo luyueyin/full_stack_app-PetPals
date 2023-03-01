@@ -2,16 +2,17 @@ import { createTheme } from '@mui/material/styles';
 import { lighten } from 'polished';
 
 export const Colors = {
-    primary: '#88b3b5',
+    primary: '#aec3b0',
     secondary: '#5b6eeb',
-    white: '#ebf2f2',
-    black: '#161a19',
-    grey: '#bbbfbf',
+    white: '#fffcf2',
+    black: '#000814',
+    grey: '#003049',
     background: '#d0d8dc',
-    danger: "#db301d",
-    success: "#4caf50",
+    danger: "#e3d5ca",
+    success: "#d62828",
     body_bg: '#f3f6f9',
-    dk_primary: '#79a6a8',
+    dk_primary: '#003049',
+    box_bg: '#f3f6f9',
 }
 
 const theme = createTheme({
@@ -19,7 +20,7 @@ const theme = createTheme({
         primary: {
             main: Colors.primary,
             dark: Colors.dk_primary,
-            contrastText: Colors.white,
+            // contrastText: Colors.white,
             background: Colors.danger,
         },
         secondary: {

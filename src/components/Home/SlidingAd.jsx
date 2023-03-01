@@ -1,7 +1,7 @@
 import { Slide } from "@mui/material";
 import { useEffect, useState } from "react"
-import { StyledContainer } from "./styled/StyledContainer"
-import { Bodytext } from './styled/Font';
+import { StyledContainer } from "../styled/StyledContainer"
+import { Bodytext } from '../styled/Font';
 
 
 const messages = [

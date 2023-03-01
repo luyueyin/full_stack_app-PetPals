@@ -1,0 +1,80 @@
+import React from 'react'
+import { ContentContainer } from '../styled/StyledContainer';
+import { Bodytext } from '../styled/Font';
+import { OptionBox } from '../styled/StyledContainer';
+import { Colors } from '../styled/Theme'
+import { styled, Stack } from '@mui/material';
+import Box from '@mui/material/Box';
+import Paper from '@mui/material/Paper';
+import Grid from '@mui/material/Grid';
+import { Icontext, StepTitle } from '../styled/Font'
+import Filter1SharpIcon from '@mui/icons-material/Filter1Sharp';
+import Filter2SharpIcon from '@mui/icons-material/Filter2Sharp';
+import Filter3SharpIcon from '@mui/icons-material/Filter3Sharp';
+import Filter4SharpIcon from '@mui/icons-material/Filter4Sharp';
+import { ServiceBox } from '../styled/StyledContainer';
+
+const Item = styled(Stack)(({ theme }) => ({
+    [theme.breakpoints.up('md')]: {
+        height: 270,
+
+    },
+    padding: '40px 50px',
+    spacing: 3,
+    alignItems: 'center',
+    justifyContent: 'center',
+    direction: 'column',
+    color: Colors.black,
+    // border: `1px solid ${Colors.black}`,
+    boxShadow: '1px 2px 10px rgba(0, 0, 0, 0.2);',
+    borderRadius: 30,
+}));
+
+const message = [
+    "Read verified reviews by pet parents like you and choose a sitter who’s a great match for you and your pets.", "Schedule a free virtual or in-person Meet & Greet to find the perfect fit(Optional).", "We make it simple to book through our website or app.", "Your pets are in great hands with a loving sitter."
+]
+
+function StepIntro() {
+    return (
+        <ContentContainer>
+            <Bodytext>
+                <h1>Meet local sitters</h1>
+            </Bodytext>
+
+            <OptionBox>
+                <Grid container spacing={5}>
+                    <Grid item xs={12} md={6}>
+                        <Item>
+                            <Filter1SharpIcon fontSize='large' />
+                            <StepTitle>Search</StepTitle>
+                            <Icontext>{message[0]}</Icontext>
+                        </Item>
+                    </Grid>
+
+                    <Grid item xs={12} md={6}>
+                        <Item>
+                            <Filter2SharpIcon fontSize='large' />
+                            <StepTitle>Meet</StepTitle>
+                            <Icontext>{message[1]}</Icontext>
+                        </Item>
+                    </Grid>
+
+                    <Grid item xs={12} md={6}>
+                        <Item><Filter3SharpIcon fontSize='large' />
+                            <StepTitle>Book</StepTitle>
+                            <Icontext>{message[2]}</Icontext>
+                        </Item>
+                    </Grid>
+                    <Grid item xs={12} md={6}>
+                        <Item><Filter4SharpIcon fontSize='large' />
+                            <StepTitle>Relax</StepTitle>
+                            <Icontext>{message[3]}</Icontext></Item>
+                    </Grid>
+                </Grid>
+            </OptionBox>
+
+        </ContentContainer>
+    )
+}
+
+export default StepIntro

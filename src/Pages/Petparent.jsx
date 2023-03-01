@@ -1,12 +1,12 @@
-import React from "react";
-import FindingSitter from "../components/FindingSitter";
-import { BannerContainer } from "../components/styled/Banner";
+import React from 'react';
+import FindingSitter from '../components/Perent/FindingSitter';
+import StepIntro from '../components/Perent/StepIntro';
 
 const PetParent = () => {
     return (
         <>
         <FindingSitter />
-        
+        <StepIntro />
         </>
     )
 }

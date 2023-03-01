@@ -1,14 +1,9 @@
-import { ContentContainer, StyledContainer, ServiceBox, IconBox } from './styled/StyledContainer'
+import { ContentContainer, StyledContainer, ServiceBox, IconBox } from '../styled/StyledContainer'
 import MeetingRoomRoundedIcon from '@mui/icons-material/MeetingRoomRounded';
 import DirectionsCarRoundedIcon from '@mui/icons-material/DirectionsCarRounded';
 // import Stack from '@mui/material/Stack';
 import { Grid, Box, styled, Typography, Stack, useMediaQuery, Paper } from "@mui/material";
-import { Bodytext } from './styled/Font'
-import { color } from '@mui/system';
-import { Padding } from '@mui/icons-material';
-import { Colors } from './styled/Theme';
-import { useEffect, useState } from "react"
-
+import { Bodytext } from '../styled/Font'
 
 const message = [
     "Come to your home and take care of your pet while you're away. They will play with your pets, offer food and water, give potty breaks or clean the litter box, and provide any other necessary care.",

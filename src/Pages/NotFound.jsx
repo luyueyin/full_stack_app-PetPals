@@ -2,7 +2,7 @@ import * as React from 'react';
 import CssBaseline from '@mui/material/CssBaseline';
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
-import { Bodytext } from './styled/Font';
+import { Bodytext } from '../components/styled/Font';
 import { Typography } from '@mui/material';
 import { Stack } from '@mui/system';
 
