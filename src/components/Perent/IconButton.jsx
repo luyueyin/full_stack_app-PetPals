@@ -11,11 +11,11 @@ const StyledButton = styled(Button)({
     color: Colors.black,
     textTransform: 'none',
     fontSize: 16,
-    width: '30rem',
-    padding: '10px 70px',
+    width: '25rem',
     borderRadius: '60px',
-    justifyContent: 'space-around',
-    lineHeight: 1.5,
+    marginTop: '30px',
+    justifyContent: 'center',
+    lineHeight: 2.3,
     boxShadow: '1px 2px 10px rgba(0, 0, 0, 0.2);',
     
     '&:hover': {

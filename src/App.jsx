@@ -41,7 +41,8 @@ const router = createBrowserRouter(
     <Route path='/' element={<Nav />} errorElement={<NotFound />}>
       <Route path='/' exact element={<Mainpage />} />
       <Route path='/petparent' exact element={<PetParent />} />
-        <Route path='/petparent/selection' exact element={<Selection1 />} />
+        <Route path='/petparent/selection/step1' exact element={<Selection1 />} />
+        <Route path='/petparent/selection/step2' exact element={<Selection1 />} />
       <Route path='/petsitter' exact element={<PetSitter />} />
     </Route>)
 )

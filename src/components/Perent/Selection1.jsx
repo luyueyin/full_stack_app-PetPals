@@ -6,6 +6,7 @@ import { Colors } from "../styled/Theme";
 import { IconTitle } from '../styled/Font'
 import Stack from '@mui/material/Stack';
 import IconLabelButtons from '../Perent/IconButton'
+import TextField from '@mui/material/TextField';
 
 import * as React from 'react';
 import { Box, Container } from '@mui/material';
@@ -14,9 +15,8 @@ import Step from '@mui/material/Step';
 import StepLabel from '@mui/material/StepLabel';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
-import CustomizedButtons from '../styled/Button';
-import SelectionButton from '../styled/Button';
-import { fontWeight } from '@mui/system';
+import FormPropsTextFields from './IconButton';
+
 
 
 const steps = ['Select campaign settings', 'Create an ad group', 'Create an ad'];
@@ -106,21 +106,82 @@ export default function Selection1() {
                             </React.Fragment>
                         ) : (
                             <React.Fragment>
-                                <IconTitle >Step {activeStep + 1}</IconTitle>
-                                <Stack
-                                    direction={'column'}
-                                    spacing={3}
-                                    marginTop={'40px'}
-                                    alignItems={'center'}
-                                    display={'flex'}
-                                    adjustPosition={'center'}
-                                >
-                                    <IconLabelButtons text={'Dogs'} />
-                                    <IconLabelButtons text={'Cats'} />
-                                    <IconLabelButtons text={'Small mammals'} />
-                                </Stack>
+
+                                {/* Step1---------------------------------------------------------------- */}
+                                <OptionBox>
+                                    <Bodytext>
+                                        <h3>What needs looking after?</h3>
+                                    </Bodytext>
+                                    <Stack
+                                        direction={'column'}
+                                        spacing={3}
+                                        marginTop={'40px'}
+                                        alignItems={'center'}
+                                        display={'flex'}
+                                        adjustPosition={'center'}
+                                    >
+                                        <IconLabelButtons text={'Dogs'} />
+                                        <IconLabelButtons text={'Cats'} />
+                                    </Stack>
+                                </OptionBox>
+
+                                {/* Step2---------------------------------------------------------------- */}
+                                <OptionBox>
+                                    <Bodytext>
+                                        <h3>What does your dog need ?</h3>
+                                    </Bodytext>
+                                    <Stack
+                                        direction={'column'}
+                                        spacing={3}
+                                        marginTop={'40px'}
+                                        alignItems={'center'}
+                                        display={'flex'}
+                                        adjustPosition={'center'}
+                                    >
+                                        <IconLabelButtons text={'Day Care'} />
+                                        <IconLabelButtons text={'Transportation'} />
+                                        <IconLabelButtons text={'Overnight Sitting'} />
+                                        <IconLabelButtons text={'Walking'} />
+                                        <IconLabelButtons text={'Grooming'} />
+
+                                    </Stack>
+                                </OptionBox>
+
+                                {/* Step3---------------------------------------------------------------- */}
+                                <OptionBox>
+                                    <Bodytext>
+                                        <h3>What's your postcode ?</h3>
+                                    </Bodytext>
+                                    <Stack
+                                        direction={'column'}
+                                        spacing={3}
+                                        m={'40px'}
+                                        alignItems={'center'}
+                                        display={'flex'}
+
+                                    >
+                                        {/* Postcode Input Box */}
+                                        <Box
+                                            sx={{
+                                                '& .MuiTextField-root': { m: 5, width: '20rem' },
+                                            }}
+                                            noValidate
+                                        >
+                                            <TextField
+                                                id='postcode-field'
+                                                label='Your Postcode'
+                                                type='number'
+                                            />
+                                        </Box>
+
+                                    </Stack>
+                                </OptionBox>
+
+
+
 
                                 <Box sx={{ display: 'flex', flexDirection: 'row', pt: '8vh' }}>
+                                    <Button onClick={handleReset}>Reset</Button>
                                     <Button
                                         color="inherit"
                                         disabled={activeStep === 0}
@@ -143,6 +204,10 @@ export default function Selection1() {
                                 </Box>
                             </React.Fragment>
                         )}
+
+
+
+
 
                     </OptionBox>
                 </ContentContainer>
