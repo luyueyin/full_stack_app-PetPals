@@ -35,14 +35,14 @@ function App() {
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route path='/' element={<MainPage />} errorElement={<NotFound />}>
+    <Route path='/' element={<Nav />} errorElement={<NotFound />}>
       <Route path='/' exact element={<Home />} />
       <Route path='/petparent' exact element={<PetParent />} />
       <Route path='/petsitter' exact element={<PetSitter />} />
     </Route>)
 )
 
-function MainPage() {
+function Nav() {
   return (
     <>
       <Navbar /> 

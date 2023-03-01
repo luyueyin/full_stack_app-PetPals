@@ -1,13 +1,13 @@
 import CustomizedButtons from "./styled/Button"
 import StyledButton from './styled/Button';
-import { IntroButtonContainer, ButtonContainer } from './styled/StyledContainer'
+import { StyledContainer } from './styled/StyledContainer'
 import Stack from '@mui/material/Stack';
 import { Bodytext } from './styled/Font';
 
 export default function ButtonGroup() {
 
     return (
-        <IntroButtonContainer>
+        <StyledContainer>
             <Bodytext>
                 <h1>What would you like to do?</h1>
             </Bodytext>
@@ -22,6 +22,6 @@ export default function ButtonGroup() {
                 <CustomizedButtons text={'Schedule a Service'} onClick={() => {alert('clicked');}}></CustomizedButtons>
                 <CustomizedButtons text={'Post Job For Free'} onClick={() => {alert('clicked');}} />
             </Stack>
-        </IntroButtonContainer>
+        </StyledContainer>
     )
 }

@@ -1,10 +1,11 @@
 import React from "react";
+import { BannerContainer } from "../components/styled/Banner";
 
 const PetParent = () => {
     return (
-        <div>
+        <BannerContainer>
             <h1>Pet Parent</h1>
-        </div>
+        </BannerContainer>
     )
 }
 

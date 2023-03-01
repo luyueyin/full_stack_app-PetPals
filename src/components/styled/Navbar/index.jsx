@@ -10,16 +10,17 @@ import { Link } from 'react-router-dom';
 
 
 export const NavbarContainer = styled(Box)(() => ({
-    display: 'flex',
-    height: '80px',
+    display: 'absolute',
+    height: '65px',
     backgroundColor: 'white',
     justifyContent: 'center',
     boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1);',
     alignItems: 'center',
-    padding: '0rem 3rem 0.4rem 0rem',
+    padding: '0rem 3rem 0.35rem 0rem',
     width: '100%',
     position: 'fixed',
     top: 0,
+    opacity: 0.8,
 }));
 
 export const NavbarMaxWidth = styled(Box)(() => ({
@@ -35,7 +36,7 @@ export const NavbarMaxWidth = styled(Box)(() => ({
 
 export const NavbarHeader = styled(Typography)(({theme}) => ({
     [theme.breakpoints.up('md')]: {
-        fontSize: '3em',
+        fontSize: '2.3em',
         paddingLeft: '2rem',
     },
     fontSize: '2.7em',
