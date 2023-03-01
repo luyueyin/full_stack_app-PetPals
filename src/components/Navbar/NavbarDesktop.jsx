@@ -1,7 +1,7 @@
 import { ListItemText, Typography } from "@mui/material";
 import { NavList, NavbarContainer, NavbarHeader, StyledLink, NavbarDesktopWidth } from "../styled/Navbar";
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+
 
 export default function NavbarDesktop({ matches }) {
 

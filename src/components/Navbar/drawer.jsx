@@ -9,7 +9,7 @@ import DoorbellIcon from '@mui/icons-material/Doorbell';
 import Typography from '@mui/material/Typography';
 import PetsIcon from '@mui/icons-material/Pets';
 import AssignmentIndIcon from '@mui/icons-material/AssignmentInd';
-
+import { Link } from 'react-router-dom';
 
 const MiddleDivider = styled((props) => (
     <Divider variant="middle" {...props} />
@@ -19,7 +19,7 @@ const MiddleDivider = styled((props) => (
 export default function AppDrawer() {
     
     const { drawerOpen, setDrawerOpen } = useNavContext()
-
+    const linkStyle = {textDecoration: 'none', color: Colors.black}
     return (
         <>
             {drawerOpen && (
@@ -43,20 +43,28 @@ export default function AppDrawer() {
 
             <Drawer open={drawerOpen} anchor="bottom">
                 <List>
+                    <Link to='/' style={linkStyle}> 
                     <ListItemButton sx={{ padding: '20px 0px 30px 50px' }}>
                         <DoorbellIcon sx={{ marginRight: '30px', fontSize: '2.6rem' }} />
                         <Typography variant="h6">Home</Typography>
                     </ListItemButton>
+                    </Link>
                     <MiddleDivider />
+
+                    <Link to='/petparent' style={linkStyle}> 
                     <ListItemButton sx={{ padding: '30px 0px 30px 50px' }}>
                         <PetsIcon sx={{ marginRight: '30px', fontSize: '2.6rem' }} />
                         <Typography variant="h6">Pet Parent</Typography>
                     </ListItemButton>
+                    </Link>
                     <MiddleDivider />
+
+                    <Link to='/petsitter' style={linkStyle}> 
                     <ListItemButton sx={{ padding: '30px 0px 30px 50px' }}>
                         <AssignmentIndIcon sx={{ marginRight: '30px', fontSize: '2.6rem' }} />
                         <Typography variant="h6">Pet Sitter</Typography>
                     </ListItemButton>
+                    </Link>
 
                 </List>
             </Drawer>

@@ -13,13 +13,12 @@ export const StyledContainer = styled(Box)(({ theme }) => ({
     // background: 'lightblue',
 }))
 
-
 export const ContentContainer = styled(Box)({
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
-    padding: '5% 10%',
+    padding: '6% 10%',
     // background: Colors.white,
 })
 

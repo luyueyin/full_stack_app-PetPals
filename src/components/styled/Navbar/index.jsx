@@ -37,6 +37,7 @@ export const NavbarDesktopWidth = styled(Box)(() => ({
 
 export const NavbarMobileWidth = styled(Box)(() => ({
     display: 'flex',
+    justifyContent: 'space-between',
     width: '100%',
     paddingLeft: '1.8rem',
     paddingRight: '1rem',
