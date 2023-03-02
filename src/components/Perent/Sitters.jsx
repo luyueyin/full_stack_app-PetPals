@@ -24,8 +24,22 @@ function SitterInfo() {
                     <Bodytext>
                         <h1>Let's find your perfect pet sitter</h1>
                     </Bodytext>
+                    <Avatar
+                        avatarStyle='Circle'
+                        topType='ShortHairShortWaved'
+                        accessoriesType='Sunglasses'
+                        hairColor='Auburn'
+                        facialHairType='BeardMajestic'
+                        facialHairColor='Black'
+                        clotheType='ShirtVNeck'
+                        clotheColor='Blue01'
+                        eyeType='Dizzy'
+                        eyebrowType='UpDownNatural'
+                        mouthType='Eating'
+                        skinColor='DarkBrown'
+                    />
                     <OptionBox width={'100%'}>
-
+                        /petparent/selection/sitters
                         {/* <OneSitter /> */}
 
                     </OptionBox>
