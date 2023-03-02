@@ -20,6 +20,7 @@ import ClickedCard from './ClickedCard';
 const Item = styled(Paper)(({ theme }) => ({
     padding: theme.spacing(8),
     border: `1px solid ${Colors.black}`,
+    
 }));
 
 
@@ -40,17 +41,15 @@ function CartList() {
     return (
         <BannerContainer>
             <Container maxWidth={'1200px'}>
-                <ContentContainer>
+
 
                     <Button
                         color="inherit"
                         onClick={handleBack}
                         href="/petparent"
-                    >
-                        Back
+                    >Back
                     </Button>
 
-                    {/* <Stack display={'flex'} width={'100%'}> */}
                     <GridBox>
                         {
                             cards.map((card) => {
@@ -62,7 +61,7 @@ function CartList() {
                     </GridBox>
                     <ContentContainer>
                         <ClickedCard />
-                    </ContentContainer>
+
 
                 </ContentContainer>
             </Container>

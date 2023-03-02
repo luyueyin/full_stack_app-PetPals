@@ -2,7 +2,7 @@ export const cards = [
     {
         "id": 1,
         "name": "Alice",
-        "experience": "5 years",
+        "experience": "Experience: 5 years",
         "phone": "(04) 1666-4784",
         "email": "alice@example.com",
         "address": "Catalinaton",
@@ -13,7 +13,7 @@ export const cards = [
     {
         "id": 2,
         "name": "Bob",
-        "experience": "More than 5 years",
+        "experience": "Experience: more than 5 years",
         "phone": "(04) 4635-7736",
         "email": "bob@example.com",
         "address": "East Vinnieton",
@@ -24,7 +24,7 @@ export const cards = [
     {
         "id": 3,
         "name": "Charlie",
-        "experience": "1 year",
+        "experience": "Experience: 1 year",
         "phone": "(02) 4861-4744",
         "email": "charlie@example.com",
         "address": "South Noemietown",
@@ -35,7 +35,7 @@ export const cards = [
     {
         "id": 4,
         "name": "David",
-        "experience": "3 years",
+        "experience": "Experience: 3 years",
         "phone": "(02) 0395-4030",
         "email": "david@example.com",
         "address": "Bergstromshire",
@@ -46,7 +46,7 @@ export const cards = [
     {
         "id": 5,
         "name": "Emily",
-        "experience": "3 years",
+        "experience": "Experience: 3 years",
         "phone": "(04) 8647-5795",
         "email": "emily@example.com",
         "address": "Ezekielchester",
@@ -57,7 +57,7 @@ export const cards = [
     {
         "id": 6,
         "name": "Frank",
-        "experience": "5 years",
+        "experience": "Experience: 5 years",
         "phone": "(04) 4892-0265",
         "email": "frank@example.com",
         "address": "Parisianshire",
@@ -68,7 +68,7 @@ export const cards = [
     {
         "id": 7,
         "name": "Grace",
-        "experience": "1 year",
+        "experience": "Experience: 1 year",
         "phone": "(02) 4424-0664",
         "email": "grace@example.com",
         "address": "Lake Jaymeton",
@@ -79,7 +79,7 @@ export const cards = [
     {
         "id": 8,
         "name": "Henry",
-        "experience": "1 year",
+        "experience": "Experience: 1 year",
         "phone": "(04) 7835-7028",
         "email": "henry@example.com",
         "address": "North Filibertoside",

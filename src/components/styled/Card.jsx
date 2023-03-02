@@ -14,6 +14,7 @@ export const CardWrapper = styled(Box)(({ theme }) => ({
     boxShadow: '0px 0px 10px 0.1px rgba(0, 8, 0, 0.15)',
     borderRadius: '30px',
     transition: '0.3s',
+    cursor: 'pointer',
     // backgroundColor: Colors.white,
     ' &:hover': {
         boxShadow: '0px 0px 20px 1px rgba(13, 12, 12, 0.35)'

@@ -25,11 +25,10 @@ export default function CardDetail(props) {
         },
         
     ]
-    const card = props.cardInfo
+    const card = props.detail
 
     return (
         <div>
-            <h1>This is Details</h1>
             {
                 cards.map((card) => {
                     return (
