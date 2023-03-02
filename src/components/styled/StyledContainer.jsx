@@ -30,9 +30,7 @@ export const ServiceBox = styled(Container)(({ theme }) => ({
     margin: '20px',
     padding: '8px 40px',
     borderRadius: '30px',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'left',
+    
     Width: '100px',
     // border: `1px solid ${Colors.black}`,
     boxShadow: '1px 2px 10px rgba(0, 0, 0, 0.2);',
@@ -52,5 +50,16 @@ export const OptionBox = styled(Box)(({ theme }) => ({
     },
     flexGrow: 1, 
     marginTop: 45, 
+    maxWidth: '1000px' 
+}))
+
+export const CardBox = styled(Box)(({ theme }) => ({
+    [theme.breakpoints.up('md')]: {
+        marginTop: 80, 
+    },
+    flexGrow: 1, 
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'left',
     maxWidth: '1000px' 
 }))

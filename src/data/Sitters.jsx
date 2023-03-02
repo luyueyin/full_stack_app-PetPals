@@ -1,4 +1,4 @@
-export const SitterData = [
+export const cards = [
     {
         id: 1,
         "name": "Alice",
@@ -6,7 +6,8 @@ export const SitterData = [
         "phone": "(04) 1666-4784",
         "email": "alice@example.com",
         "address": "Catalinaton",
-        "Description:": "Professional pet sitter with 5 years of experience. Flexible scheduling to accommodate clients' needs"
+        "Description:": "Professional pet sitter with 5 years of experience. Flexible scheduling to accommodate clients' needs",
+        "img": "src={src='https://avataaars.io/?avatarStyle=Circle&topType=ShortHairShaggyMullet&accessoriesType=Blank&hairColor=Blonde&facialHairType=BeardMedium&facialHairColor=BrownDark&clotheType=CollarSweater&clotheColor=Gray01&eyeType=Wink&eyebrowType=RaisedExcitedNatural&mouthType=Sad&skinColor=Yellow'}"
     },
     {
         "id": 2,

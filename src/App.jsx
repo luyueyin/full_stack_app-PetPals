@@ -14,8 +14,8 @@ import globalReducer from './components/utils/globalReducer';
 import { NavProvider } from './components/Navbar/NavContext';
 import Footer from './components/Home/Footer';
 import Selection from './components/Perent/Selection';
-import Sitters from './components/Perent/Sitters';
-
+import CartList from './components/Perent/CardList';
+import CardDetail from './components/Perent/CardDetail';
 
 function App() {
 
@@ -43,7 +43,8 @@ const router = createBrowserRouter(
       <Route path='/' exact element={<Mainpage />} />
       <Route path='/petparent' exact element={<PetParent />} />
         <Route path='/petparent/selection/:stepId' exact element={<Selection />} />
-          <Route path='/petparent/selection/sitters' exact element={<Sitters />} />
+          <Route path='/petparent/selection/sitters' exact element={<CartList />} />
+          <Route path='/petparent/selection/sitters/:Id' exact element={<CardDetail />} />
       <Route path='/petsitter' exact element={<PetSitter />} />
     </Route>)
 )
