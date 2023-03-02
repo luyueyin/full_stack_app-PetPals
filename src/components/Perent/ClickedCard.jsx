@@ -6,6 +6,7 @@ import { RatingBox, CardText, CardDetailBox, NameBox, AddressBox, CardDescriptio
 import CartRating from './Rating';
 import CardDetail from './CardDetail';
 import styled from 'styled-components';
+import Card from './Card';
 
 const GridBox = styled.div`
     display: grid;
@@ -19,45 +20,25 @@ const DetailWapper = styled.div`
     align-items: center;
 `
 
-export default function ClickedCard() {
+export default function ClickedCard(props) {
 
-    const cards = [
-        {
-            "id": 2,
-            "name": "Bob",
-            "experience": "More than 5 years",
-            "phone": "(04) 4635-7736",
-            "email": "bob@example.com",
-            "address": "East Vinnieton",
-            "description": "Excellent communication skills, including regular updates for pet owners while they are away.",
-            "img": "https://avataaars.io/?avatarStyle=Circle&topType=ShortHairShortCurly&accessoriesType=Round&hairColor=PastelPink&facialHairType=Blank&facialHairColor=Black&clotheType=GraphicShirt&clotheColor=Blue03&graphicType=Cumbia&eyeType=Wink&eyebrowType=UpDownNatural&mouthType=ScreamOpen&skinColor=Tanned",
-            "value": "4.5"
-        },
-        {
-            "id": 2,
-            "name": "Bob",
-            "experience": "More than 5 years",
-            "phone": "(04) 4635-7736",
-            "email": "bob@example.com",
-            "address": "East Vinnieton",
-            "description": "Excellent communication skills, including regular updates for pet owners while they are away.",
-            "img": "https://avataaars.io/?avatarStyle=Circle&topType=ShortHairShortCurly&accessoriesType=Round&hairColor=PastelPink&facialHairType=Blank&facialHairColor=Black&clotheType=GraphicShirt&clotheColor=Blue03&graphicType=Cumbia&eyeType=Wink&eyebrowType=UpDownNatural&mouthType=ScreamOpen&skinColor=Tanned",
-            "value": "4.5"
-        },
-    ]
+    const card = props.card
 
-
+    if (!card) {
+        return null;
+    }
     return (
         <div id='clickedcard'>
-            <h1>Clicked Card</h1>
             <DetailWapper>
-                {
+                <h1>Clicked Card</h1>
+                <Card cardDetail={card} />
+                {/* {
                     cards.map((card) => {
                         return (
                             <CardDetail key={card.id} detail={card}/>
                         )
                     })
-                }
+                } */}
             </DetailWapper>
         </div>
     )

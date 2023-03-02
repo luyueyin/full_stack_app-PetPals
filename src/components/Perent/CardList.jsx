@@ -2,13 +2,9 @@ import { BannerContainer, BannerContent, BannerDescription, BannerImage, BannerT
 import { ContentContainer, CardBox } from '../styled/StyledContainer';
 import { Bodytext } from '../styled/Font';
 import { Paper, Container, Grid, Stack } from '@mui/material';
-import { OptionBox } from '../styled/StyledContainer';
 import Card from './Card';
 import { Colors } from '../styled/Theme';
 import styled from 'styled-components';
-
-import IconLabelButtons from './IconButton';
-
 import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 import axios from "axios"
@@ -30,18 +26,17 @@ const GridBox = styled.div`
 `
 
 
-function CartList() {
+function CartList(props) {
 
     const handleBack = () => {
         <Button href="/petparent/selection">Link</Button>
     };
-
+    
 
 
     return (
         <BannerContainer>
             <Container maxWidth={'1200px'}>
-
 
                     <Button
                         color="inherit"
@@ -54,7 +49,7 @@ function CartList() {
                         {
                             cards.map((card) => {
                                 return (
-                                    <Card key={card.id} cardInfo={card} />
+                                    <Card key={card.id} cardInfo={card} setClick={props.setClick} />
                                 )
                             })
                         }

@@ -1,7 +1,3 @@
-import { BannerContainer, BannerContent, BannerDescription, BannerImage, BannerTitle } from '../styled/Banner';
-import { ContentContainer, CardBox } from '../styled/StyledContainer';
-import Button from '@mui/material/Button';
-import { Paper, Container, Grid, Stack, styled } from '@mui/material';
 import { CardWrapper, CardText } from '../styled/Card'
 import CartRating from './Rating';
 
