@@ -12,7 +12,7 @@ export default function Footer() {
                 alignItems: "center",
                 display: "flex",
                 borderTop: '1px solid gray',
-                position: 'relative',
+                position: 'static',
                 bottom: 0,
                 zIndex: 99,
             }}

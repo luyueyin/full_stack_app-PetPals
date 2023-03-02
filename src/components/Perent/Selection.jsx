@@ -1,15 +1,14 @@
+import React from 'react';
 import { BannerContainer, BannerContent, BannerDescription, BannerImage, BannerTitle } from '../styled/Banner';
 import { ContentContainer } from '../styled/StyledContainer';
 import { Bodytext } from '../styled/Font';
 import { OptionBox } from '../styled/StyledContainer';
-import { Colors } from "../styled/Theme";
-import { IconTitle } from '../styled/Font'
+import { Box, Container } from '@mui/material';
 import Stack from '@mui/material/Stack';
-import IconLabelButtons from '../Perent/IconButton'
+import IconLabelButtons from './IconButton'
 import TextField from '@mui/material/TextField';
 
-import * as React from 'react';
-import { Box, Container } from '@mui/material';
+
 import Stepper from '@mui/material/Stepper';
 import Step from '@mui/material/Step';
 import StepLabel from '@mui/material/StepLabel';

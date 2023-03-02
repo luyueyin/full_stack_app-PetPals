@@ -1,11 +1,11 @@
 import { RouterProvider, Route, Outlet, createBrowserRouter, createRoutesFromElements } from 'react-router-dom';
 import { useEffect, useReducer, useState } from "react"
-import PetParent from './Pages/Petparent';
-import PetSitter from './Pages/Petsitter';
-import Mainpage from './Pages/Mainpage';
+import PetParent from './pages/Petparent';
+import PetSitter from './pages/Petsitter';
+import Mainpage from './pages/Mainpage';
 import AppDrawer from './components/Navbar/drawer';
 import Navbar from './components/Navbar';
-import NotFound from './Pages/NotFound';
+import NotFound from './pages/NotFound';
 
 import { ThemeProvider } from '@mui/material/styles';
 import theme from './components/styled/Theme';
@@ -13,7 +13,8 @@ import { GlobalContext } from './components/utils/globalStateContext';
 import globalReducer from './components/utils/globalReducer';
 import { NavProvider } from './components/Navbar/NavContext';
 import Footer from './components/Home/Footer';
-import Selection1 from './components/Perent/Selection1';
+import Selection from './components/Perent/Selection';
+import Sitters from './components/Perent/Sitters';
 
 
 function App() {
@@ -41,8 +42,8 @@ const router = createBrowserRouter(
     <Route path='/' element={<Nav />} errorElement={<NotFound />}>
       <Route path='/' exact element={<Mainpage />} />
       <Route path='/petparent' exact element={<PetParent />} />
-        <Route path='/petparent/selection/step1' exact element={<Selection1 />} />
-        <Route path='/petparent/selection/step2' exact element={<Selection1 />} />
+        <Route path='/petparent/selection/:stepId' exact element={<Selection />} />
+          <Route path='/petparent/selection/sitters' exact element={<Sitters />} />
       <Route path='/petsitter' exact element={<PetSitter />} />
     </Route>)
 )
@@ -59,6 +60,5 @@ function Nav() {
     </>
   )
 }
-
 
 export default App;

@@ -1,7 +1,7 @@
 import React from 'react';
 import FindingSitter from '../components/Perent/FindingSitter';
 import StepIntro from '../components/Perent/StepIntro';
-import Selection1 from '../components/Perent/Selection1';
+import Selection1 from '../components/Perent/Selection';
 
 const PetParent = () => {
     return (
