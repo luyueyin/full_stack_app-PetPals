@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react"
 import FindingSitter from '../components/Perent/FindingSitter';
 import StepIntro from '../components/Perent/StepIntro';
-import Selection1 from '../components/Perent/Selection';
+import Selection1 from '../components/Perent/Search';
 import CardList from '../components/Perent/CardList';
 import ClickedCard from '../components/Perent/ClickedCard';
-
+import { Outlet } from 'react-router-dom';
 
 
 const PetParent = () => {
@@ -19,8 +19,9 @@ const PetParent = () => {
         <>
         <FindingSitter />
         <StepIntro />
-        <Selection1 />
-        <CardList setClick={setClick} clickedCard={clickedCard}/>
+        {/* <Selection1 />
+        <CardList setClick={setClick} clickedCard={clickedCard}/> */}
+        <Outlet />
         </>
     )
 }

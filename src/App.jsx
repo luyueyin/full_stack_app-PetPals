@@ -13,9 +13,10 @@ import { GlobalContext } from './components/utils/globalStateContext';
 import globalReducer from './components/utils/globalReducer';
 import { NavProvider } from './components/Navbar/NavContext';
 import Footer from './components/Home/Footer';
-import Selection from './components/Perent/Selection';
+import Selection from './components/Perent/Search';
 import CartList from './components/Perent/CardList';
-import CardDetail from './components/Perent/CardDetail';
+import ClickedCard from './components/Perent/ClickedCard';
+import Card from './components/Perent/Card';
 
 function App() {
 
@@ -45,9 +46,9 @@ const router = createBrowserRouter(
     <Route path='/' element={<Nav />} errorElement={<NotFound />}>
       <Route path='/' exact element={<Mainpage />} />
       <Route path='/petparent' exact element={<PetParent />} />
-        <Route path='/petparent/selection/:stepId' exact element={<Selection />} />
-          <Route path='/petparent/selection/sitters' exact element={<CartList />} />
-          <Route path='/petparent/selection/sitters/:Id' exact element={<CardDetail />} />
+        <Route path='/petparent/search' exact element={<Selection />} />
+          <Route path='/petparent/search/sitters' exact element={<ClickedCard />} />
+          <Route path='/petparent/search/sitters/:cardId' exact element={<Card />} />
       <Route path='/petsitter' exact element={<PetSitter />} />
     </Route>)
 )

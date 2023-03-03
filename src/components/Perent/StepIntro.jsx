@@ -3,16 +3,16 @@ import { ContentContainer } from '../styled/StyledContainer';
 import { Bodytext } from '../styled/Font';
 import { OptionBox } from '../styled/StyledContainer';
 import { Colors } from '../styled/Theme'
-import { styled, Stack } from '@mui/material';
-import Box from '@mui/material/Box';
-import Paper from '@mui/material/Paper';
+import { styled, Stack, Button } from '@mui/material';
+
 import Grid from '@mui/material/Grid';
 import { Icontext, StepTitle } from '../styled/Font'
+import { StyledLinkButton } from '../styled/Button';
 import Filter1SharpIcon from '@mui/icons-material/Filter1Sharp';
 import Filter2SharpIcon from '@mui/icons-material/Filter2Sharp';
 import Filter3SharpIcon from '@mui/icons-material/Filter3Sharp';
 import Filter4SharpIcon from '@mui/icons-material/Filter4Sharp';
-import { ServiceBox } from '../styled/StyledContainer';
+
 
 const Item = styled(Stack)(({ theme }) => ({
     [theme.breakpoints.up('md')]: {
@@ -25,8 +25,7 @@ const Item = styled(Stack)(({ theme }) => ({
     justifyContent: 'center',
     direction: 'column',
     color: Colors.black,
-    // border: `1px solid ${Colors.black}`,
-    boxShadow: '1px 2px 10px rgba(0, 0, 0, 0.2);',
+    border: `1px solid ${Colors.black}`,
     borderRadius: 30,
 }));
 
@@ -36,11 +35,10 @@ const message = [
 
 function StepIntro() {
     return (
-        <ContentContainer>
+        <ContentContainer sx={{ bgcolor: Colors.body_bg }}>
             <Bodytext>
-                <h1>Meet local sitters</h1>
+                <h1>Meet Local Sitters</h1>
             </Bodytext>
-
             <OptionBox>
                 <Grid container spacing={5}>
                     <Grid item xs={12} md={6}>
@@ -72,6 +70,7 @@ function StepIntro() {
                     </Grid>
                 </Grid>
             </OptionBox>
+            <StyledLinkButton to={'/petparent/search'}>Search</StyledLinkButton>
 
         </ContentContainer>
     )

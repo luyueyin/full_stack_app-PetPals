@@ -21,7 +21,8 @@ const DetailWapper = styled.div`
 `
 
 export default function ClickedCard(props) {
-
+    // cost [ListItem, setItem] = useState(null) & delete the props
+    const { cardId } = props
     const card = props.card
 
     if (!card) {

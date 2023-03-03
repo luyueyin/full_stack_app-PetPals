@@ -19,10 +19,14 @@ export default function Card(props) {
     };
 
     const card = props.cardInfo
+    const navigate = useNavigate()
 
 
     return (
-        <CardWrapper onClick={() => handleCardClick(card.id)}>
+        // <CardWrapper onClick={() => handleCardClick(card.id)}>
+        <CardWrapper onClick={() => navigate(`sitters/${card.id}`)}>
+
+
             <img style={{ height: 180, marginBottom: '20px' }} src={card.img} />
 
             <div>

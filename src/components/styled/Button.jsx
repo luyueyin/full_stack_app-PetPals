@@ -1,9 +1,12 @@
-import { styled } from '@mui/material/styles';
+import { darken, styled } from '@mui/material/styles';
 import Button, { ButtonProps } from '@mui/material/Button';
 import Stack from '@mui/material/Stack';
 import theme from './Theme'
 import { Colors } from './Theme';
 import { lighten } from 'polished';
+import { Link } from 'react-router-dom';
+import { shadows } from '@mui/system';
+
 
 const BootstrapButton = styled(Button)({
     textTransform: 'none',
@@ -11,24 +14,31 @@ const BootstrapButton = styled(Button)({
     padding: '7px 38px',
     borderRadius: '60px',
     lineHeight: 1.5,
-    fontFamily: [
-        'sans-serif',
-        '"Apple Color Emoji"',
-        '"Segoe UI Emoji"',
-        '"Segoe UI Symbol"',
-    ].join(','),
     '&:hover': {
         backgroundColor: Colors.primary,
         borderColor: 'secondary',
     },
-
     '&:active': {
         backgroundColor: lighten(1, Colors.primary),
     },
+});
 
-    // '&:focus': {
-    //     boxShadow: '0 0 0 0.1rem rgba(0,123,255,.3)',
-    // },
+export const LinkedButton = styled(Button)({
+    fontSize: 15,
+    fontWeight: 'lighter',
+    padding: '7px 15px',
+    lineHeight: 1.5,
+    marginTop: '40px',
+    backgroundColor: Colors.primary,
+    color: Colors.black,
+    '&:hover': {
+        // backgroundColor: Colors.black,
+        backgroundColor: lighten(0.03, Colors.primary),
+        boxShadow: '1px 2px 6px rgba(0, 0, 0, 0.2);',
+    },
+    '&:disabled': {
+        backgroundColor: 'transparent',
+    }
 });
 
 
@@ -43,8 +53,6 @@ export default function CustomizedButtons(props) {
 };
 
 
-
-
 export const SelectionButton = styled(Button)(({ props }) => ({
 
     padding: '80px 0px 40px 0px',
@@ -54,3 +62,22 @@ export const SelectionButton = styled(Button)(({ props }) => ({
     alignItems: 'center',
     background: 'lightblue',
 }))
+
+
+// export const StyledLinkButton = ({to, children}) => {
+//     return (
+//         <Link
+//             to={to}
+//             style= {{ textDecoration: 'none'}}
+//         ><LinkedButton>{children}</LinkedButton> </Link>
+//     )
+// }
+
+export const StyledLinkButton = ({to, children}) => {
+    return (
+        <Link
+            to={to}
+            style= {{ textDecoration: 'none'}}
+        ><LinkedButton>{children}</LinkedButton> </Link>
+    )
+}

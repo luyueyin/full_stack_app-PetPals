@@ -11,26 +11,32 @@ import LocalTaxiIcon from '@mui/icons-material/LocalTaxi';
 import { OptionBox } from '../styled/StyledContainer';
 
 import { styled } from '@mui/material/styles';
-import Paper from '@mui/material/Paper';
+import Container from '@mui/material/Container';
 import Grid from '@mui/material/Unstable_Grid2';
 
 
-const Item = styled(Paper)(({ theme }) => ({
+const Item = styled(Container)(({ theme }) => ({
     [theme.breakpoints.up('md')]: {
         display: 'flex',
         justifyContent: 'center',
         justifyItems: 'center',
         alignItems: 'center',
-        height: 170,
+        height: 160,
     },
-    padding: theme.spacing(4.3),
+    padding: theme.spacing(3),
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
     color: Colors.black,
-    backgroundColor: Colors.white,
-    borderRadius: 30,
+    // background: Colors.primary,
+    borderRadius: 20,
     height: 110,
+    border: `1px solid ${Colors.black}`,
+    // cursor: 'pointer',
+    // transition: '0.5s',
+    // ' &:hover': {
+    //     boxShadow: '1px 2px 12px rgba(0, 0, 0, 0.6);',
+    // },
 }));
 
 
@@ -40,11 +46,11 @@ export default function FindingSitter() {
         <BannerContainer>
             <ContentContainer>
                 <Bodytext>
-                    <h1>Let's find your perfect pet sitter</h1>
+                    <h1>Customize Your Own Service</h1>
                 </Bodytext>
 
                 <OptionBox>
-                    <Grid container spacing={2}>
+                    <Grid container spacing={2.2}>
                         <Grid xs={6} md={4}>
                             <Item>
                                 <LightModeIcon fontSize='large' />
