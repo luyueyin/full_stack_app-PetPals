@@ -24,22 +24,6 @@ export default function AppDrawer() {
         drawerOpen(false);
     };
 
-    const drawerBarItem = [
-        {
-            title: 'Home',
-            id: 'home'
-        },
-        {
-            title: 'Pet Parent',
-            id: 'petparent'
-        },
-        {
-            title: 'Pet Sitter',
-            id: 'petsitter'
-        },
-
-    ]
-
     return (
         <>
             {drawerOpen && (

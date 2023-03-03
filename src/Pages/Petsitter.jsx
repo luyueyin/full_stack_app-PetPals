@@ -3,14 +3,10 @@ import AddCard from '../components/Sitter/AddCard';
 
 const PetSitter = () => {
     return (
-        <div id='petsitter'>
-            <BannerContainer id='addCard'>
-                <h3>Pet Sitter</h3>
-                <div>
-                    <AddCard />
-                </div>
-            </BannerContainer>
-        </div>
+        <BannerContainer>
+            <h1>Pet Sitter</h1>
+            <AddCard />
+        </BannerContainer>
     )
 }
 

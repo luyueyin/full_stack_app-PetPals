@@ -13,16 +13,14 @@ const Mainpage = () => {
     }, []);
 
     return (
-        <div id="home">
-            <Container maxWidth="1800px">
-                <NavProvider>
-                    <Banner />
-                    <Intro />
-                    <ButtonGroup />
-                    <Service />
-                </NavProvider>
-            </Container >
-        </div>
+        <Container maxWidth="1800px">
+            <NavProvider>
+                <Banner />
+                <Intro />
+                <ButtonGroup />
+                <Service />
+            </NavProvider>
+        </Container >
 
     )
 }
