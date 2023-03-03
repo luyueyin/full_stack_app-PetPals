@@ -1,12 +1,14 @@
 import { BannerContainer } from '../components/styled/Banner';
 import AddCard from '../components/Sitter/AddCard';
+import Intro from '../components/Sitter/Intro'
+import Card from '../components/Sitter/AddCard';
 
 const PetSitter = () => {
     return (
-        <BannerContainer>
-            <h1>Pet Sitter</h1>
+        <div id='petsitter'>
+            <Intro />
             <AddCard />
-        </BannerContainer>
+        </div>
     )
 }
 

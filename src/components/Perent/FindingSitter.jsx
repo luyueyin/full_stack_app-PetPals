@@ -32,11 +32,6 @@ const Item = styled(Container)(({ theme }) => ({
     borderRadius: 20,
     height: 110,
     border: `1px solid ${Colors.black}`,
-    // cursor: 'pointer',
-    // transition: '0.5s',
-    // ' &:hover': {
-    //     boxShadow: '1px 2px 12px rgba(0, 0, 0, 0.6);',
-    // },
 }));
 
 

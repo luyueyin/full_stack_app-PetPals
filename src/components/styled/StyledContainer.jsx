@@ -1,4 +1,5 @@
 import { Box, Container, styled } from "@mui/material";
+import { Colors } from './Theme'
 
 export const StyledContainer = styled(Box)(({ theme }) => ({
     [theme.breakpoints.up('md')]: {
@@ -9,7 +10,7 @@ export const StyledContainer = styled(Box)(({ theme }) => ({
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
-    // background: 'lightblue',
+    // background: Colors.black,
 }))
 
 export const ContentContainer = styled(Box)({
@@ -30,7 +31,6 @@ export const ServiceBox = styled(Container)(({ theme }) => ({
     margin: '20px',
     padding: '8px 40px',
     borderRadius: '30px',
-    
     Width: '100px',
     // border: `1px solid ${Colors.black}`,
     boxShadow: '1px 2px 10px rgba(0, 0, 0, 0.2);',

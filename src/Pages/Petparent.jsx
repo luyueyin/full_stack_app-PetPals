@@ -8,21 +8,21 @@ import { Outlet } from 'react-router-dom';
 
 
 const PetParent = () => {
-    
+
     const [clickedCard, setClickedCard] = useState(null)
-    
+
     function setClick(card) {
         setClickedCard(card)
     }
 
     return (
-        <>
-        <FindingSitter />
-        <StepIntro />
-        {/* <Selection1 />
-        <CardList setClick={setClick} clickedCard={clickedCard}/> */}
-        <Outlet />
-        </>
+        <div id="petparent">
+            <FindingSitter />
+            <StepIntro />
+            {/* <Selection1 />
+            <CardList setClick={setClick} clickedCard={clickedCard}/> */}
+            <Outlet />
+        </div>
     )
 }
 

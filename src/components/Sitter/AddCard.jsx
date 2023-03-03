@@ -1,15 +1,19 @@
 import styled from "styled-components"
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-
+import Intro from "./Intro";
+import { LinkedButton } from "../styled/Button";
+import Box from '@mui/material/Box';
+import AccountCircle from '@mui/icons-material/AccountCircle';
+import { TextField, InputAdornment } from '@mui/material';
 
 const InputWrapper = styled.div`
     display: grid;
     grid-template-column: 1fr 1fr;
     width: 400px;
-    margin-bottom: 10px;
+    gap: 10px;
+    margin-bottom: 20px;
 `
-
 
 function AddCard() {
 
@@ -22,6 +26,7 @@ function AddCard() {
     })
 
     const [errorMessage, setErrorMessage] = useState(null)
+    const [successMessage, setSuccessMessage] = useState(null);
 
 
     const handleSubmit = (event) => {
@@ -30,12 +35,15 @@ function AddCard() {
         // console.log(card)
 
         //Validation
-        if(!card.first_name) {
+        if (!card.first_name) {
             setErrorMessage("Please enter your first name.");
-        } else if(!card.email) {
+            setSuccessMessage(null)
+        } else if (!card.email) {
             setErrorMessage("Please enter your email.");
+            setSuccessMessage(null)
         } else {
             setErrorMessage(null)
+            setSuccessMessage("Form Submitted")
             axios
                 .post("https://fakestoreapi.com/users", card)
                 .then((res) => res.data)
@@ -44,21 +52,17 @@ function AddCard() {
 
     }
 
-    // const handleFullnameChange = (event) => {
-    //     setFullName(event.target.value)
-    // }
-
     const handleOnChange = (event) => {
-        // console.log(event.target.name)
-        // console.log(event.target.value)
         setCard((preCard) => {
+            console.log(event.target.value)
             return {
                 ...preCard,
                 [event.target.name]: event.target.value
 
+
             }
         })
-        
+
     }
 
 
@@ -70,36 +74,59 @@ function AddCard() {
                 onSubmit={handleSubmit}
             >
 
+
                 <InputWrapper>
                     <label htmlFor="first_name">First Name:</label>
-                    <input type='text' name='first_name' value={card.first_name} onChange={handleOnChange} />
-                </InputWrapper>
-                <InputWrapper>
+                    <TextField id="first_name" variant="filled" type='text' name='first_name' value={card.first_name} onChange={handleOnChange} />
+
                     <label htmlFor="last_name">Last Name:</label>
-                    <input type='text' name='last_name' value={card.last_name} onChange={handleOnChange} />
-                </InputWrapper>
-                <InputWrapper>
-                    <label htmlFor="description">Description:</label>
-                    <input type='text' name='description' value={card.description} onChange={handleOnChange} />
-                </InputWrapper>
-                <InputWrapper>
+                    <TextField id="last_name" variant="filled" type='text' name='last_name' value={card.last_name} onChange={handleOnChange} />
+
                     <label htmlFor="email">Email:</label>
-                    <input type='email' name='email' id='email' value={card.email} onChange={handleOnChange} />
-                </InputWrapper>
-                <InputWrapper>
+                    <TextField id="email" variant="filled" type='email' name='email' value={card.email} onChange={handleOnChange}
+                        InputProps={{
+                            endAdornment: (
+                                <InputAdornment position="end">
+                                    @
+                                </InputAdornment>
+                            ),
+                        }} />
+
                     <label htmlFor="phone">Phone:</label>
-                    <input type='number' name='phone' value={card.phone} onChange={handleOnChange} />
-                </InputWrapper>
-                <InputWrapper>
-                    <label htmlFor="photo">Photo:</label>
-                    <input type='file' name='photo' accept='.png .jpg .jpeg' />
+                    <TextField id="phone" variant="filled" type='number' name='phone' value={card.phone} onChange={handleOnChange} />
+
+                    <label htmlFor="description">Description:</label>
+                    <TextField id="description" variant="filled" type='text' name='description' value={card.description} onChange={handleOnChange} multiline rows={3} />
+
+
+                    <AccountCircle sx={{ color: 'action.active', mr: 1, mt: 2 }} />
+                    <input id="photo" type='file' label='oho' name='photo' accept='.png .jpg .jpeg' />
+
                 </InputWrapper>
 
                 <div>
-                    <input type='submit' value='Add Card'></input>
+
+
+
+                </div>
+
+                {/* <InputWrapper> */}
+                {/* <label htmlFor="last_name">Last Name:</label>
+                    <input type='text' name='last_name' value={card.last_name} onChange={handleOnChange} /> */}
+                {/* </InputWrapper> */}
+
+                <InputWrapper>
+
+                </InputWrapper>
+
+                <div>
+
+                    <LinkedButton id='submiBtn' onClick={handleSubmit}>Add Card</LinkedButton>
+
+
                 </div>
                 <div>
-                    {errorMessage}
+                    {errorMessage}{successMessage}
                 </div>
 
             </form>

@@ -1,5 +1,5 @@
 import { styled } from "@mui/material/styles";
-import { Box, Typography } from "@mui/material";
+import { Box, Typography, Container } from "@mui/material";
 import theme, {Colors} from '../Theme';
 
 export const BannerContainer = styled(Box)(() => ({
@@ -9,7 +9,7 @@ export const BannerContainer = styled(Box)(() => ({
     height: '100%',
     padding: '0px 0px',
     marginTop: '75px',
-    backgroundColor: 'primary',
+    // backgroundColor: Colors.dk_primary,
     [theme.breakpoints.down('sm')]: {
         flexDirection: 'column',
         alignItems: 'center',
