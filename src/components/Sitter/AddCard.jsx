@@ -1,5 +1,6 @@
 import styled from "styled-components"
 import React, { useState, useEffect } from "react";
+import axios from "axios";
 
 
 const InputWrapper = styled.div`
@@ -13,16 +14,34 @@ const InputWrapper = styled.div`
 function AddCard() {
 
     const [card, setCard] = useState({
-        fullname: '',
+        first_name: '',
+        last_name: '',
         description: '',
         email: '',
-        price: '',
+        phone: '',
     })
+
+    const [errorMessage, setErrorMessage] = useState(null)
+
 
     const handleSubmit = (event) => {
         event.preventDefault();
         console.log('Submited')
-        console.log(card)
+        // console.log(card)
+
+        //Validation
+        if(!card.first_name) {
+            setErrorMessage("Please enter your first name.");
+        } else if(!card.email) {
+            setErrorMessage("Please enter your email.");
+        } else {
+            setErrorMessage(null)
+            axios
+                .post("https://fakestoreapi.com/users", card)
+                .then((res) => res.data)
+                .then((json) => (console.log(json)))
+        }
+
     }
 
     // const handleFullnameChange = (event) => {
@@ -51,10 +70,13 @@ function AddCard() {
                 onSubmit={handleSubmit}
             >
 
-
                 <InputWrapper>
-                    <label htmlFor="fullname">Full Name:</label>
-                    <input type='text' name='fullname' value={card.fullname} onChange={handleOnChange} />
+                    <label htmlFor="first_name">First Name:</label>
+                    <input type='text' name='first_name' value={card.first_name} onChange={handleOnChange} />
+                </InputWrapper>
+                <InputWrapper>
+                    <label htmlFor="last_name">Last Name:</label>
+                    <input type='text' name='last_name' value={card.last_name} onChange={handleOnChange} />
                 </InputWrapper>
                 <InputWrapper>
                     <label htmlFor="description">Description:</label>
@@ -65,8 +87,8 @@ function AddCard() {
                     <input type='email' name='email' id='email' value={card.email} onChange={handleOnChange} />
                 </InputWrapper>
                 <InputWrapper>
-                    <label htmlFor="price">Price:</label>
-                    <input type='number' name='price' value={card.price} onChange={handleOnChange} />
+                    <label htmlFor="phone">Phone:</label>
+                    <input type='number' name='phone' value={card.phone} onChange={handleOnChange} />
                 </InputWrapper>
                 <InputWrapper>
                     <label htmlFor="photo">Photo:</label>
@@ -75,7 +97,9 @@ function AddCard() {
 
                 <div>
                     <input type='submit' value='Add Card'></input>
-
+                </div>
+                <div>
+                    {errorMessage}
                 </div>
 
             </form>
