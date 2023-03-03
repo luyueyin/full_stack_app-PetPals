@@ -16,13 +16,12 @@ const PetParent = () => {
     }
 
     return (
-        <>
+        <div id="petparent">
         <FindingSitter />
         <StepIntro />
         <Selection1 />
-        <CardList setClick={setClick} />
-        <ClickedCard card={clickedCard} />
-        </>
+        <CardList setClick={setClick} card={clickedCard}/>
+        </div>
     )
 }
 

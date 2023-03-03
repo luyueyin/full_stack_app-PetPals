@@ -7,16 +7,22 @@ import React, { useState } from "react";
 export default function Card(props) {
 
     const [showDetails, setShowDetails] = useState(false);
+    const [clickedCard, setClickedCard] = useState(null);
 
-    const handleCardClick = () => {
-        setShowDetails(!showDetails);
+    const handleCardClick = (id) => {
+        if (id === clickedCard) {
+            setShowDetails(!showDetails);
+        } else {
+            setShowDetails(!showDetails);
+            setClickedCard(id);
+        }
     };
 
     const card = props.cardInfo
-    const navigate = useNavigate()
+
 
     return (
-        <CardWrapper onClick={handleCardClick}>
+        <CardWrapper onClick={() => handleCardClick(card.id)}>
             <img style={{ height: 180, marginBottom: '20px' }} src={card.img} />
 
             <div>

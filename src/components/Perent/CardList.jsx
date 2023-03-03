@@ -28,28 +28,28 @@ const GridBox = styled.div`
 
 function CartList(props) {
 
-    const handleBack = () => {
-        <Button href="/petparent/selection">Link</Button>
-    };
-    
 
+    // const handleBack = () => {
+    //     <Button href="/petparent/selection">Link</Button>
+    // };
+    
 
     return (
         <BannerContainer>
             <Container maxWidth={'1200px'}>
 
-                    <Button
+                    {/* <Button
                         color="inherit"
                         onClick={handleBack}
                         href="/petparent"
                     >Back
-                    </Button>
+                    </Button> */}
 
                     <GridBox>
                         {
                             cards.map((card) => {
                                 return (
-                                    <Card key={card.id} cardInfo={card} setClick={props.setClick} />
+                                    <Card key={'card-list-item'+card.id} cardInfo={card} setClick={props.setClick}/>
                                 )
                             })
                         }
