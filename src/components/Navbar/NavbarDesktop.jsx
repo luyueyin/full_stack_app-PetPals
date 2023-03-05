@@ -8,7 +8,7 @@ export default function NavbarDesktop({ matches }) {
     return (
         <NavbarContainer>
             <NavbarDesktopWidth>
-                <StyledLink to='/'><NavbarHeader>Petpels</NavbarHeader></StyledLink>
+                <StyledLink to='/'><NavbarHeader>Petpals</NavbarHeader></StyledLink>
                 <NavList type="row">
                     <StyledLink to='/'>Home</StyledLink>
                     <StyledLink to='/petparent'>Pet Parent</StyledLink>

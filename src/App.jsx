@@ -15,7 +15,8 @@ import { NavProvider } from './components/Navbar/NavContext';
 import Footer from './components/Home/Footer';
 import Selection from './components/Perent/Search';
 import CardList from './components/Perent/CardList';
-
+import ClickedCard from './components/Perent/ClickedCard';
+import Review from './components/Perent/Review';
 
 function App() {
 
@@ -41,24 +42,28 @@ const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path='/' element={<Nav />} errorElement={<NotFound />}>
       <Route path='/' exact element={<Mainpage />} />
-      <Route path='/petparent' exact element={<PetParent />} />
-        <Route path='/petparent/search' exact element={<Selection />} />
-          <Route path='/petparent/search/sitters' exact element={<CardList />} />
-          {/* <Route path='/petparent/search/sitters/:cardId' exact element={<Card />} /> */}
       <Route path='/petsitter' exact element={<PetSitter />} />
+      <Route path='/petparent' exact element={<PetParent />} />
+      <Route path='/petparent/sitters' exact element={<CardList />} />
+        <Route path='/petparent/sitters/:cardId' exact element={<Review />} />
     </Route>)
 )
 
 function Nav() {
   return (
-    <>
+    <div className="page-wrapper">
       <NavProvider>
         <Navbar />
         <AppDrawer />
         <Outlet />
-        <Footer />
+        <Footer sx={{
+          position: 'absolute',
+          bottom: 0,
+          zIndex: 99,
+          flexShrink: 0,
+        }} />
       </NavProvider>
-    </>
+    </div>
   )
 }
 

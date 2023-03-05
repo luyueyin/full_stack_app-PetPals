@@ -35,7 +35,7 @@ export const AdContainer = styled(Box)(({ theme }) => ({
 
 export const ContentContainer = styled(Box)(({ theme }) => ({
     [theme.breakpoints.up('md')]: {
-        padding: '50px 10px',
+        padding: '50px 35px',
     },
     display: 'flex',
     flexDirection: 'column',

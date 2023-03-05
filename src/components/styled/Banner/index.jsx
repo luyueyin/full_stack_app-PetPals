@@ -34,14 +34,16 @@ export const BannerDescription = styled(Typography)(({ theme }) => ({
     letterSpacing: 1.4,
     marginBottom: '3em',
     fontSize: '25px',
-    width: '100%',
+    width: '90%',
     marginLeft: '3rem',
     position: 'relative',
     flexDirection: 'column',
+    padding: '0px, 50px, 0px, 0px',
     [theme.breakpoints.down('sm')]: {
         lineHeight: 1.15,
         letterSpacing: 1.15,
         marginBottom: '1.5em',
+        padding: '0px, 50px, 0px, 0px',
     },
 }))
 

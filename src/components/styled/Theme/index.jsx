@@ -1,5 +1,5 @@
 import { createTheme } from '@mui/material/styles';
-import { lighten } from 'polished';
+import { lighten, margin } from 'polished';
 
 export const Colors = {
     primary: '#ffc300',
@@ -48,7 +48,9 @@ const theme = createTheme({
         MuiDivider: {
             styleOverrides: {
                 root: {
-                    borderColor: lighten(0.2, Colors.primary)
+                    colors: Colors.black,
+                    margin: '10px',
+                    fontWeight: 'bolder'
                 }
             }
         },

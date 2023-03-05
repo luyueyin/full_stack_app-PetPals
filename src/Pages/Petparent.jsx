@@ -13,8 +13,6 @@ const PetParent = () => {
         <div id="petparent">
             <StepIntro />
             <FindingSitter />
-            {/* <Search />
-            <CardList /> */}
             <Outlet />
         </div>
     )

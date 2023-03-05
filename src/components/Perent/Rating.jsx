@@ -3,13 +3,12 @@ import Rating from '@mui/material/Rating';
 import StarIcon from '@mui/icons-material/Star';
 
 
-export default function CartRating({ value }) {
+export default function CardRating({ value }) {
     // const value = 3.5;
-
     return (
         <Stack>
             <Rating
-                name="text-feedback"
+                name="Reviews"
                 value={value}
                 readOnly
                 precision={0.5}

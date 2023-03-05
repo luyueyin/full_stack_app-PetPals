@@ -6,6 +6,7 @@ import { Colors } from '../styled/Theme';
 import styled from 'styled-components';
 import useApi from "../utils/useApi"
 import ClickedCard from './ClickedCard';
+import { padding } from 'polished';
 // import axios from 'axio'
 
 const Item = styled(Paper)(({ theme }) => ({
@@ -19,22 +20,23 @@ const GridBox = styled.div`
 `
 
 function CartList() {
-    const [cardsWithoutReview] = useApi('http://localhost:5000/petparent/search/sitters')
-    console.log(cardsWithoutReview)
+    const [ cardsWithoutReview] = useApi('/cards')
+    // console.log(cardsWithoutReview)
     const cards = cardsWithoutReview.map((card) => {
         card.point = 5
         return card
     })
 
-    return (
-        <BannerContainer>
-            <Container maxWidth={'1200px'}>
+    return ( 
+        <BannerContainer >
+            <Container maxWidth={'1200px'} sx={{minHeight: '85vh',
+        padding: '80px'}}>
                     <GridBox>
                         {
                             cards.map((card) => {
                                 return (
                                     <Card 
-                                        key={card.id}
+                                        key={"Sitter Card" + card.id}
                                         cardInfo={card}
                                     />
                                 )
@@ -42,7 +44,7 @@ function CartList() {
                         }
                     </GridBox>
                     <ContentContainer>
-                        <ClickedCard />
+                        {/* <ClickedCard /> */}
                 </ContentContainer>
             </Container>
         </BannerContainer >

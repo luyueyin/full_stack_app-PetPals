@@ -11,35 +11,25 @@ export const CardWrapper = styled(Box)(({ theme }) => ({
     justifyContent: 'center',
     alignItems: 'center',
     flexDirection: 'column',
-    boxShadow: '0px 0px 10px 0.1px rgba(0, 8, 0, 0.15)',
+    boxShadow: '0px 0px 10px 0.1px rgba(0, 0, 0, 0.1)',
     borderRadius: '30px',
     transition: '0.3s',
     cursor: 'pointer',
-    // backgroundColor: Colors.white,
+    backgroundColor: Colors.secondary,
     ' &:hover': {
-        boxShadow: '0px 0px 20px 1px rgba(13, 12, 12, 0.35)'
+        boxShadow: '0px 0px 10px 1px rgba(4, 5, 5, 0.3)'
     },
 
     [theme.breakpoints.up('md')]: {
         position: 'relative',
-        maxWidth: '500px',
+        maxWidth: '400px',
     }
 }))
-
 
 export const CardActionButton = styled(IconButton)(() => ({
     background: Colors.primary,
     margin: 4,
 }))
-
-// export const CardFavButton = styled(CardFavButton)(({ isfav, theme }) => ({
-//     color: isfav ? Colors.primary : Colors.light,
-//     [theme.breakpoints.up('md')]: {
-//         position: 'absolute',
-//         right: 0,
-//         top: 0,
-//     },
-// }))
 
 export const AddToCard = styled(Button)(() => ({
     width: '120px',

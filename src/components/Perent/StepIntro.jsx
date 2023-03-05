@@ -31,7 +31,7 @@ const Item = styled(Stack)(({ theme }) => ({
 }));
 
 const message = [
-    "Read verified reviews by pet parents like you and choose a sitter who’s a great match for you and your pets.", "Schedule a free virtual or in-person Meet & Greet to find the perfect fit(Optional).", "We make it simple to book through our website or app.", "Your pets are in great hands with a loving sitter."
+    "Read verified reviews by pet parents like you and choose a sitter who’s a great match for you and your pets.", "Schedule a free virtual or in-person Meet & Greet to find the perfect fit (Optional).", "We make it simple to book through our website or app.", "Your pets are in great hands with a loving sitter."
 ]
 
 function StepIntro() {
@@ -42,12 +42,12 @@ function StepIntro() {
                 <h1>Meet Local Sitters</h1>
             </Bodytext>
             <OptionBox>
-                <Grid container spacing={5}>
+                <Grid container spacing={3}>
                     <Grid item xs={12} md={6}>
                         <Item>
                             <Filter1SharpIcon fontSize='large' />
                             <StepTitle>Search</StepTitle>
-                            <Icontext>{message[0]}</Icontext>
+                            <Icontext><h5>{message[0]}</h5></Icontext>
                         </Item>
                     </Grid>
 
@@ -55,20 +55,20 @@ function StepIntro() {
                         <Item>
                             <Filter2SharpIcon fontSize='large' />
                             <StepTitle>Meet</StepTitle>
-                            <Icontext>{message[1]}</Icontext>
+                            <Icontext><h5>{message[1]}</h5></Icontext>
                         </Item>
                     </Grid>
 
                     <Grid item xs={12} md={6}>
                         <Item><Filter3SharpIcon fontSize='large' />
                             <StepTitle>Book</StepTitle>
-                            <Icontext>{message[2]}</Icontext>
+                            <Icontext><h5>{message[2]}</h5></Icontext>
                         </Item>
                     </Grid>
                     <Grid item xs={12} md={6}>
                         <Item><Filter4SharpIcon fontSize='large' />
                             <StepTitle>Relax</StepTitle>
-                            <Icontext>{message[3]}</Icontext></Item>
+                            <Icontext><h5>{message[3]}</h5></Icontext></Item>
                     </Grid>
                 </Grid>
             </OptionBox>

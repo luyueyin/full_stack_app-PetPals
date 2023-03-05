@@ -41,7 +41,6 @@ export const NavbarMobileWidth = styled(Box)(() => ({
     width: '100%',
     paddingLeft: '1.8rem',
     paddingRight: '1rem',
-    // backgroundColor: Colors.primary,
 }));
 
 

@@ -83,7 +83,7 @@ export default function FindingSitter() {
                 </OptionBox>
 
                 <StyledLinkButton
-                to={'/petparent/search'}>
+                to={'/petparent/sitters'}>
                     Search
                 </StyledLinkButton>
             </ContentContainer>

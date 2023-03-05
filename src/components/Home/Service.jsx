@@ -1,8 +1,12 @@
 import { ContentContainer, StyledContainer, ServiceBox, IconBox } from '../styled/StyledContainer'
 import MeetingRoomRoundedIcon from '@mui/icons-material/MeetingRoomRounded';
 import DirectionsCarRoundedIcon from '@mui/icons-material/DirectionsCarRounded';
-// import Stack from '@mui/material/Stack';
+import PinDropIcon from '@mui/icons-material/PinDrop';
 import { Grid, Box, styled, Typography, Stack, useMediaQuery, Paper } from "@mui/material";
+import LightModeIcon from '@mui/icons-material/LightMode';
+import AirportShuttleIcon from '@mui/icons-material/AirportShuttle';
+import ParkIcon from '@mui/icons-material/Park';
+import Brightness4Icon from '@mui/icons-material/Brightness4';
 import { Bodytext } from '../styled/Font'
 import Intro from './SlidingAd'
 
@@ -31,7 +35,7 @@ export default function Service() {
             <ContentContainer>
                 {/* 1 */}
                 <ServiceBox>
-                    <IconBox><MeetingRoomRoundedIcon sx={{ fontSize: 60 }} /></IconBox>
+                    <IconBox><PinDropIcon sx={{ fontSize: 60 }} /></IconBox>
                     <Bodytext textAlign={{ sm: 'center', md: 'left' }}>
                         <h4>{Title[0]}</h4>
                         <h6>{message[0]}</h6>
@@ -41,7 +45,7 @@ export default function Service() {
 
                 {/* 2 */}
                 <ServiceBox>
-                    <IconBox><MeetingRoomRoundedIcon sx={{ fontSize: 60 }} /></IconBox>
+                    <IconBox><LightModeIcon sx={{ fontSize: 60 }} /></IconBox>
                     <Bodytext textAlign={{ sm: 'center', md: 'left' }}>
                         <h4>{Title[1]}</h4>
                         <h6>{message[1]}</h6>
@@ -50,7 +54,7 @@ export default function Service() {
 
                 {/* 3 */}
                 <ServiceBox>
-                    <IconBox><MeetingRoomRoundedIcon sx={{ fontSize: 60 }} /></IconBox>
+                    <IconBox><Brightness4Icon sx={{ fontSize: 60 }} /></IconBox>
                     <Bodytext textAlign={{ sm: 'center', md: 'left' }}>
                         <h4>{Title[2]}</h4>
                         <h6>{message[2]}</h6>
@@ -59,7 +63,7 @@ export default function Service() {
 
                 {/* 4 */}
                 <ServiceBox>
-                    <IconBox><MeetingRoomRoundedIcon sx={{ fontSize: 60 }} /></IconBox>
+                    <IconBox><ParkIcon sx={{ fontSize: 60 }} /></IconBox>
                     <Bodytext textAlign={{ sm: 'center', md: 'left' }}>
                         <h4>{Title[3]}</h4>
                         <h6>{message[3]}</h6>
@@ -68,7 +72,7 @@ export default function Service() {
 
                 {/* 5 */}
                 <ServiceBox>
-                    <IconBox><MeetingRoomRoundedIcon sx={{ fontSize: 60 }} /></IconBox>
+                    <IconBox><AirportShuttleIcon sx={{ fontSize: 60 }} /></IconBox>
                     <Bodytext textAlign={{ sm: 'center', md: 'left' }}>
                         <h4>{Title[4]}</h4>
                         <h6>{message[4]}</h6>

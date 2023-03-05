@@ -2,7 +2,7 @@ import { Divider, Drawer, List, ListItemButton } from "@mui/material"
 import { styled } from '@mui/system';
 import { useNavContext } from './NavContext'
 import { DrawerCloseButton } from '../styled/Navbar'
-import theme, { Colors } from '../styled/Theme'
+import { Colors } from '../styled/Theme'
 import CloseIcon from '@mui/icons-material/Close';
 import { lighten } from 'polished';
 import DoorbellIcon from '@mui/icons-material/Doorbell';

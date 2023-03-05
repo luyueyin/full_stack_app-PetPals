@@ -21,10 +21,10 @@ export default function ButtonGroup() {
                 adjustPosition={'center'}
             >
                 <StyledLinkButton to='/petparent'>
-                {'Schedule a Service'}
+                {'Find a Pet Sitter'}
                 </StyledLinkButton>
                 <StyledLinkButton to='/petsitter'>
-                {'Post Job For Free'}
+                {'Become a Pet Sitter'}
                 </StyledLinkButton>
             </Stack>
         </ButtonGroupContainer>
