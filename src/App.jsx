@@ -20,12 +20,8 @@ import Review from './components/Perent/Review';
 
 function App() {
 
-  const initialState = {
-    logedInUserName: '',
-    tokens: '',
-  }
 
-  const [store, dispatch] = useReducer(globalReducer, initialState)
+  const [store, dispatch] = useReducer(globalReducer)
 
   return (
     <div className='App'>
@@ -45,7 +41,7 @@ const router = createBrowserRouter(
       <Route path='/petsitter' exact element={<PetSitter />} />
       <Route path='/petparent' exact element={<PetParent />} />
       <Route path='/petparent/sitters' exact element={<CardList />} />
-        <Route path='/petparent/sitters/:cardId' exact element={<Review />} />
+        <Route path='/petparent/sitters/:sitterId' exact element={<Review />} />
     </Route>)
 )
 

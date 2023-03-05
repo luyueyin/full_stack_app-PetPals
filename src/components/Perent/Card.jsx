@@ -5,7 +5,7 @@ import React, { useState } from "react";
 import PhoneAndroidIcon from '@mui/icons-material/PhoneAndroid';import Stack from '@mui/material/Stack';
 import MarkEmailUnreadIcon from '@mui/icons-material/MarkEmailUnread';
 import Divider from '@mui/material/Divider';
-import Review from './Review';
+import { CardButton } from '../styled/Button';
 
 export default function Card(props) {
     const [showDetails, setShowDetails] = useState(false);
@@ -21,12 +21,18 @@ export default function Card(props) {
     };
 
     const card = props.cardInfo
+    const navigate = useNavigate()
+
+    function handleAddReview(e) {
+        e.stopPropagation()
+        navigate(`product/${card._id}`)
+    }
     
     return (
         <CardWrapper onClick={() => handleCardClick(card.id)}>
 
             <img style={{ height: 180, marginBottom: '20px' }} src={card.image} />
-            <div>
+
                 <CardText>{card.name}</CardText>
                 <CardText>{card.experience}</CardText>
                 <CardText>{card.city}</CardText>
@@ -41,12 +47,12 @@ export default function Card(props) {
                             <MarkEmailUnreadIcon fontSize={'small'} />
                             <CardText>{card.email}</CardText>
                         </Stack>
-                        <Review />
                     </Stack>
                 )}
-                <CardText>{card.description}</CardText>
+                <CardText><h5>{card.description}</h5></CardText>
                 <CardText><CardRating value={card.point} /></CardText>
-            </div>
+                <CardButton onClick={handleAddReview}><h5>Review</h5></CardButton>
+
         </CardWrapper>
     )
 }

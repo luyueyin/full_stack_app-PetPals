@@ -88,5 +88,4 @@ export const CardBox = styled(Box)(({ theme }) => ({
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'left',
-    maxWidth: '1000px' 
 }))

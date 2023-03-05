@@ -15,6 +15,7 @@ export const CardWrapper = styled(Box)(({ theme }) => ({
     borderRadius: '30px',
     transition: '0.3s',
     cursor: 'pointer',
+    minHeight: '500px',
     backgroundColor: Colors.secondary,
     ' &:hover': {
         boxShadow: '0px 0px 10px 1px rgba(4, 5, 5, 0.3)'
@@ -49,7 +50,7 @@ export const CardText = styled(Box)(({ theme }) => ({
     padding: 4,
     display: 'flex',
     flexDirection: 'column',
-    alignItems: 'center',
+    textAlign: 'center',
 }))
 
 export const CardActionWapper = styled(Box)(({ isfav, theme }) => ({

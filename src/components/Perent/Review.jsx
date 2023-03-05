@@ -1,95 +1,84 @@
-import { useReducer, useState } from "react"
-// import reviewReducer from "./reducers/reviewReducer"
+import { useReducer } from "react"
+import reviewReducer from "../utils/reducers"
 import Rating from '@mui/material/Rating';
 import StarIcon from '@mui/icons-material/Star';
-import { margin } from "@mui/system";
+
 
 const initialReviews = [
     {
         id: 1,
-        point: 5,
         description: "bad to use, do not recommend",
     },
     {
         id: 2,
-        point: 4,
         description: "good to use, definitely recommend",
     },
 ]
 
 function Review() {
-    const [reviews, setReviews] = useState(initialReviews)
-    const [review, setReview] = useState("")
-    const [showEdit, setShowEdit] = useState(false)
-    const [editReviewId, setEditReviewId] = useState(null)
-    const [editReviewDesc, setEditReviewDesc] = useState("")
 
-    // const [] = useReducer(reducer, initialReviews)
+    const initialState = {
+        reviews: initialReviews,
+        review: "",
+        showEditBox: false,
+        editReviewId: null,
+        editReviewDesc: "",
+    }
 
+    const [store, dispatch] = useReducer(reviewReducer, initialState)
 
-    
+    const { reviews, review, showEditBox, editReviewDesc } = store
+
     const handleOnChange = (e) => {
-        // dispatch({
-        //     // type: 'setReview',
-        //     data: e.target.value
-        // })
-        setReview(e.target.value)
+        dispatch({
+            type: 'setReview',
+            data: e.target.value
+        })
     }
 
     const addReview = (e) => {
         e.preventDefault()
-        // dispatch({
-        //     type: 'addReview'
-        // })
-        setReviews((prevReviews) => {
-            return [
-                ...prevReviews, { id: prevReviews.length + 1, description: review },
-            ]
+        dispatch({
+            type: 'addReview'
         })
-        setReview("")
+
+
     }
 
     const deleteReview = (id) => {
-        const newReviews = reviews.filter((review) => review.id !== id)
-        setReviews(newReviews)
+        dispatch({
+            type: 'deleteReview',
+            data: id
+        })
     }
 
     const editReview = (id) => {
-        // dispatch({
-        //     type: 'editReview',
-        //     data: id
-        // })
-        setShowEdit(true)
-        setEditReviewId(id)
-        setEditReviewDesc(
-            reviews.find((review) => review.id === id).description
-        )
+        dispatch({
+            type: 'editReview',
+            data: id
+        })
     }
+
 
     const handleEditReview = (e) => {
-        setEditReviewDesc(e.target.value)
+        dispatch({
+            type: 'setEditReview',
+            data: e.target.value
+        })
+        // setEditReviewDesc(e.target.value)
     }
 
-    const handleEdit = (e) => {
-        const newReviews = [...reviews]
-        const reviewIndexToEdit = reviews.findIndex(
-            (review) => review.id === editReviewId
-        )
-        newReviews[reviewIndexToEdit].description = editReviewDesc
-        setReviews(newReviews)
-        setEditReviewDesc("")
-        setShowEdit(false)
-
+    const handleEdit = () => {
+        dispatch({
+            type: 'handleEdit',
+        })
 
     }
-
-
-
 
 
     return (
         <div style={{ padding: 20, marginTop: 80 }}>
-            <h6>Review</h6>
+            <h6>Reviews</h6>
             {reviews.map((review) => {
                 return (
                     <div key={review.id}>
@@ -101,7 +90,7 @@ function Review() {
                     </div>
                 )
             })}
-            {showEdit && (
+            {showEditBox && (
                 <div>
                     <textarea
                         value={editReviewDesc}
@@ -123,7 +112,7 @@ function Review() {
                     emptyIcon={<StarIcon style={{ opacity: 0.55 }} fontSize="inherit" />}
                 />
                 <div>
-                    <button onClick={addReview}>Add</button>
+                    <button onClick={addReview}>Post Review</button>
                 </div>
             </form>
         </div>

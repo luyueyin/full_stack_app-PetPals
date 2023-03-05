@@ -72,3 +72,20 @@ export const StyledLinkButton = ({to, children}) => {
         ><LinkedButton>{children}</LinkedButton> </Link>
     )
 }
+
+
+export const CardButton = styled(Button)({
+    textTransform: 'none',
+    fontSize: 15,
+    width: '100%',
+    fontWeight: 'lighter',
+    marginTop: '10px',
+    padding: '6px 20px',
+    borderRadius: '5px',
+    backgroundColor: Colors.primary,
+    color: Colors.black,
+    '&:hover': {
+        backgroundColor: lighten(0.04, Colors.primary),
+        boxShadow: '1px 2px 6px rgba(0, 0, 1, 0.3);',
+    },
+});
