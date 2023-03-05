@@ -1,5 +1,5 @@
 import { RouterProvider, Route, Outlet, createBrowserRouter, createRoutesFromElements } from 'react-router-dom';
-import { useEffect, useReducer, useState } from "react"
+import { useReducer } from "react"
 import PetParent from './pages/Petparent';
 import PetSitter from './pages/Petsitter';
 import Mainpage from './pages/Mainpage';
@@ -13,10 +13,7 @@ import { GlobalContext } from './components/utils/globalStateContext';
 import globalReducer from './components/utils/globalReducer';
 import { NavProvider } from './components/Navbar/NavContext';
 import Footer from './components/Home/Footer';
-import Selection from './components/Perent/Search';
 import CardList from './components/Perent/CardList';
-import ClickedCard from './components/Perent/ClickedCard';
-import Review from './components/Perent/Review';
 
 function App() {
 
@@ -41,7 +38,7 @@ const router = createBrowserRouter(
       <Route path='/petsitter' exact element={<PetSitter />} />
       <Route path='/petparent' exact element={<PetParent />} />
       <Route path='/petparent/sitters' exact element={<CardList />} />
-        <Route path='/petparent/sitters/:sitterId' exact element={<Review />} />
+        {/* <Route path='/petparent/sitters/:sitterId' exact element={<Review />} /> */}
     </Route>)
 )
 

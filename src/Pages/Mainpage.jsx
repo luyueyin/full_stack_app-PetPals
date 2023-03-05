@@ -1,9 +1,6 @@
 import React, { useEffect } from "react";
-import Container from '@mui/material/Container';
 import { NavProvider } from '../components/Navbar/NavContext';
 import Banner from '../components/Home/Banner';
-import Footer from '../components/Home/Footer'
-import Intro from '../components/Home/SlidingAd';
 import ButtonGroup from '../components/Home/ButtonGroup'
 import Service from '../components/Home/Service';
 

@@ -4,7 +4,7 @@ import { ContentContainer } from '../styled/StyledContainer';
 import { Bodytext } from '../styled/Font';
 import { OptionBox } from '../styled/StyledContainer';
 import { Colors } from '../styled/Theme'
-import { styled, Stack, Button } from '@mui/material';
+import { styled, Stack } from '@mui/material';
 
 import Grid from '@mui/material/Grid';
 import { Icontext, StepTitle } from '../styled/Font'

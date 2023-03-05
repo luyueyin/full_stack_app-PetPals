@@ -1,7 +1,5 @@
 import FindingSitter from '../components/Perent/FindingSitter';
 import StepIntro from '../components/Perent/StepIntro';
-import CardList from '../components/Perent/CardList';
-import { Outlet } from 'react-router-dom';
 import React, { useEffect } from "react";
 
 const PetParent = () => {
@@ -13,7 +11,6 @@ const PetParent = () => {
         <div id="petparent">
             <StepIntro />
             <FindingSitter />
-            <Outlet />
         </div>
     )
 }

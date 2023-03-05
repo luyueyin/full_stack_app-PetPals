@@ -98,9 +98,6 @@ export default function Search() {
                         <h1>Let's find your perfect pet sitter</h1>
                     </Bodytext>
                     <OptionBox width={'100%'}>
-
-
-
                         <Stepper activeStep={activeStep}>
                             {steps.map((label, index) => {
                                 const stepProps = {};
@@ -206,11 +203,6 @@ export default function Search() {
                                 </Box>
                             </React.Fragment>
                         )}
-
-
-
-
-
                     </OptionBox>
                 </ContentContainer>
             </Container>
