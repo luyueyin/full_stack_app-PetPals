@@ -1,6 +1,6 @@
 import { RouterProvider, Route, Outlet, createBrowserRouter, createRoutesFromElements } from 'react-router-dom';
 import { useReducer } from "react"
-import PetParent from './pages/Petparent';
+import Petparent from './pages/Petparent';
 import PetSitter from './pages/Petsitter';
 import Mainpage from './pages/Mainpage';
 import AppDrawer from './components/Navbar/drawer';
@@ -36,7 +36,7 @@ const router = createBrowserRouter(
     <Route path='/' element={<Nav />} errorElement={<NotFound />}>
       <Route path='/' exact element={<Mainpage />} />
       <Route path='/petsitter' exact element={<PetSitter />} />
-      <Route path='/petparent' exact element={<PetParent />} />
+      <Route path='/petparent' exact element={<Petparent />} />
       <Route path='/petparent/sitters' exact element={<CardList />} />
         {/* <Route path='/petparent/sitters/:sitterId' exact element={<Review />} /> */}
     </Route>)
