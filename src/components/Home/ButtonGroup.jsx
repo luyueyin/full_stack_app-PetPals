@@ -1,27 +1,32 @@
 import CustomizedButtons from "../styled/Button"
 import StyledButton from '../styled/Button';
-import { StyledContainer } from '../styled/StyledContainer'
+import { ButtonGroupContainer } from '../styled/StyledContainer'
 import Stack from '@mui/material/Stack';
 import { Bodytext } from '../styled/Font';
+import { StyledLinkButton } from '../styled/Button';
 
 export default function ButtonGroup() {
 
     return (
-        <StyledContainer>
+        <ButtonGroupContainer>
             <Bodytext>
                 <h1>What would you like to do?</h1>
             </Bodytext>
             <Stack
                 direction={{ xs: 'column', md: 'row' }}
-                spacing={{ xs: 3, sm: 4, md: 8}}
-                marginTop={'40px'}
+                spacing={{ xs: 3, sm: 4, md: 6}}
+                marginTop={'60px'}
                 alignItems={'center'}
                 display={'flex'}
                 adjustPosition={'center'}
             >
-                <CustomizedButtons text={'Schedule a Service'} onClick={() => {alert('clicked');}}></CustomizedButtons>
-                <CustomizedButtons text={'Post Job For Free'} onClick={() => {alert('clicked');}} />
+                <StyledLinkButton to='/petparent'>
+                {'Schedule a Service'}
+                </StyledLinkButton>
+                <StyledLinkButton to='/petsitter'>
+                {'Post Job For Free'}
+                </StyledLinkButton>
             </Stack>
-        </StyledContainer>
+        </ButtonGroupContainer>
     )
 }

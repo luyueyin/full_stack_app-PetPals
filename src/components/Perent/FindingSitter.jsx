@@ -9,7 +9,7 @@ import LightModeIcon from '@mui/icons-material/LightMode';
 import NightsStayIcon from '@mui/icons-material/NightsStay';
 import LocalTaxiIcon from '@mui/icons-material/LocalTaxi';
 import { OptionBox } from '../styled/StyledContainer';
-
+import { StyledLinkButton } from '../styled/Button';
 import { styled } from '@mui/material/styles';
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Unstable_Grid2';
@@ -34,17 +34,16 @@ const Item = styled(Container)(({ theme }) => ({
     border: `1px solid ${Colors.black}`,
 }));
 
-
 export default function FindingSitter() {
 
     return (
-        <BannerContainer>
-            <ContentContainer>
+        <BannerContainer sx={{ bgcolor: Colors.body_bg }}>
+            <ContentContainer sx={{ margin: '50px 0px' }}>
                 <Bodytext>
                     <h1>Customize Your Own Service</h1>
                 </Bodytext>
 
-                <OptionBox>
+                <OptionBox sx={{marginBottom: '70px'}}>
                     <Grid container spacing={2.2}>
                         <Grid xs={6} md={4}>
                             <Item>
@@ -82,6 +81,11 @@ export default function FindingSitter() {
                         </Grid>
                     </Grid>
                 </OptionBox>
+
+                <StyledLinkButton
+                to={'/petparent/search'}>
+                    Search
+                </StyledLinkButton>
             </ContentContainer>
         </BannerContainer>
     )

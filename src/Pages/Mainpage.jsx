@@ -9,18 +9,17 @@ import Service from '../components/Home/Service';
 
 const Mainpage = () => {
     useEffect(() => {
-        document.title = "Petpals - Home";
+        window.scrollTo(0, 0);
     }, []);
 
     return (
-        <Container maxWidth="1800px">
+        <div maxWidth="1800px">
             <NavProvider>
                 <Banner />
-                <Intro />
-                <ButtonGroup />
                 <Service />
+                <ButtonGroup />
             </NavProvider>
-        </Container >
+        </div >
 
     )
 }

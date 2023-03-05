@@ -5,7 +5,10 @@ import App from './App';
 import axios from 'axios';
 // import reportWebVitals from './reportWebVitals';
 
-// axios.defaults.baseUrl = 'https://fakestoreapi.com'
+
+
+// axios.default.baseURL = "https://fakestoreapi.com"
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(

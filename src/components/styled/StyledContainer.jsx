@@ -3,37 +3,64 @@ import { Colors } from './Theme'
 
 export const StyledContainer = styled(Box)(({ theme }) => ({
     [theme.breakpoints.up('md')]: {
-        padding: '80px 0px 40px 0px',
+        padding: '60px 0px 0px 0px',
         maxwidth: '1400px',
     },
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
-    // background: Colors.black,
+    marginTop: '70px',
+    // background: Colors.dk_primary,
 }))
 
-export const ContentContainer = styled(Box)({
+export const ButtonGroupContainer = styled(Box)({
+    padding: '60px 0px 90px 0px',
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
-    padding: '7% 10%',
-    // background: Colors.white,
+    width: '100%',
+    background: Colors.secondary,
 })
+
+export const AdContainer = styled(Box)(({ theme }) => ({
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginTop: '70px',
+    // background: Colors.dk_primary,
+}))
+
+export const ContentContainer = styled(Box)(({ theme }) => ({
+    [theme.breakpoints.up('md')]: {
+        padding: '50px 10px',
+    },
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
+    padding: '7% 6%',
+}))
 
 export const ServiceBox = styled(Container)(({ theme }) => ({
     [theme.breakpoints.up('md')]: {
-        direction: 'row',
-        padding: '0px 50px',
+        flexDirection: 'row',
+        padding: '35px 50px',
+        margin: '20px',
+        maxWidth: '900px',
     },
-    direction: 'column',
-    margin: '20px',
-    padding: '8px 40px',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'center',
+    margin: '15px',
+    padding: '35px 20px',
     borderRadius: '30px',
     Width: '100px',
-    // border: `1px solid ${Colors.black}`,
-    boxShadow: '1px 2px 10px rgba(0, 0, 0, 0.2);',
+    border: `1px solid ${Colors.black}`,
+    // boxShadow: '1px 2px 10px rgba(0, 0, 0, 0.2);',
 }))
 
 

@@ -43,8 +43,7 @@ function Intro() {
                     flexDirection: 'column', 
                     alignItems: 'center', 
                     maxWidth: '1300px',
-                    marginTop: '100px',
-                    marginBottom: '50px',
+                    marginTop: '110px',
                     }}>
                     <Grid container spacing={3}>
                         <Grid item xs={12} md={4}>

@@ -1,26 +1,20 @@
-import { useEffect, useState } from "react"
 import FindingSitter from '../components/Perent/FindingSitter';
 import StepIntro from '../components/Perent/StepIntro';
-import Selection1 from '../components/Perent/Search';
 import CardList from '../components/Perent/CardList';
-import ClickedCard from '../components/Perent/ClickedCard';
 import { Outlet } from 'react-router-dom';
-
+import React, { useEffect } from "react";
 
 const PetParent = () => {
-
-    const [clickedCard, setClickedCard] = useState(null)
-
-    function setClick(card) {
-        setClickedCard(card)
-    }
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
 
     return (
         <div id="petparent">
-            <FindingSitter />
             <StepIntro />
-            {/* <Selection1 />
-            <CardList setClick={setClick} clickedCard={clickedCard}/> */}
+            <FindingSitter />
+            {/* <Search />
+            <CardList /> */}
             <Outlet />
         </div>
     )

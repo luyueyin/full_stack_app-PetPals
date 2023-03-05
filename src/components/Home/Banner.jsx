@@ -8,12 +8,12 @@ export default function Banner() {
 
     return (
         <BannerContainer>
-            <BannerImage src="./images/Cat-banner.png" />
+            <BannerImage src="./images/cat.jpeg" />
             <BannerContent>
-                <BannerTitle>Welcome to PetPals</BannerTitle>
                 <BannerDescription>
-                    Drop-In Visits
-                    Come to your home and take care of your pet while you're away. They will play with your pets, offer food and water, give potty breaks or clean the litter box, and provide any other necessary care.
+                    <h1 style={{fontSize: '10rem', left: 0}}>"
+                    </h1>This is a place where pet owners can easily find reliable and caring sitters, and where sitters can showcase their skills and passion for pet care.
+                <h1 style={{fontSize: '10rem', position: 'absolute', right: 0 }}>"</h1>
                 </BannerDescription>
             </BannerContent>
         </BannerContainer>

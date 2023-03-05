@@ -1,4 +1,5 @@
 import React from 'react'
+import { BannerContainer } from '../styled/Banner';
 import { ContentContainer } from '../styled/StyledContainer';
 import { Bodytext } from '../styled/Font';
 import { OptionBox } from '../styled/StyledContainer';
@@ -7,7 +8,7 @@ import { styled, Stack, Button } from '@mui/material';
 
 import Grid from '@mui/material/Grid';
 import { Icontext, StepTitle } from '../styled/Font'
-import { StyledLinkButton } from '../styled/Button';
+
 import Filter1SharpIcon from '@mui/icons-material/Filter1Sharp';
 import Filter2SharpIcon from '@mui/icons-material/Filter2Sharp';
 import Filter3SharpIcon from '@mui/icons-material/Filter3Sharp';
@@ -35,7 +36,8 @@ const message = [
 
 function StepIntro() {
     return (
-        <ContentContainer sx={{ bgcolor: Colors.body_bg }}>
+        <BannerContainer >
+            <ContentContainer>
             <Bodytext>
                 <h1>Meet Local Sitters</h1>
             </Bodytext>
@@ -70,9 +72,8 @@ function StepIntro() {
                     </Grid>
                 </Grid>
             </OptionBox>
-            <StyledLinkButton to={'/petparent/search'}>Search</StyledLinkButton>
-
-        </ContentContainer>
+            </ContentContainer>
+        </BannerContainer>
     )
 }
 

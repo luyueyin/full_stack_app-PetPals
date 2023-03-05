@@ -4,6 +4,7 @@ import DirectionsCarRoundedIcon from '@mui/icons-material/DirectionsCarRounded';
 // import Stack from '@mui/material/Stack';
 import { Grid, Box, styled, Typography, Stack, useMediaQuery, Paper } from "@mui/material";
 import { Bodytext } from '../styled/Font'
+import Intro from './SlidingAd'
 
 const message = [
     "Come to your home and take care of your pet while you're away. They will play with your pets, offer food and water, give potty breaks or clean the litter box, and provide any other necessary care.",
@@ -25,6 +26,7 @@ export default function Service() {
             <Bodytext>
                 <h1>Why us ?</h1>
             </Bodytext>
+            <Intro />
 
             <ContentContainer>
                 {/* 1 */}

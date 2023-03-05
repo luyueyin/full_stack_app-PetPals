@@ -1,17 +1,19 @@
 import styled from "styled-components"
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import Intro from "./Intro";
+import { ContentContainer } from '../styled/StyledContainer';
 import { LinkedButton } from "../styled/Button";
-import Box from '@mui/material/Box';
 import AccountCircle from '@mui/icons-material/AccountCircle';
 import { TextField, InputAdornment } from '@mui/material';
+import { Bodytext } from '../styled/Font';
+import { Colors } from '../styled/Theme'
+import { lighten } from 'polished';
 
 const InputWrapper = styled.div`
     display: grid;
     grid-template-column: 1fr 1fr;
-    width: 400px;
-    gap: 10px;
+    width: 500px;
+    gap: 9px;
     margin-bottom: 20px;
 `
 
@@ -28,12 +30,10 @@ function AddCard() {
     const [errorMessage, setErrorMessage] = useState(null)
     const [successMessage, setSuccessMessage] = useState(null);
 
-
     const handleSubmit = (event) => {
         event.preventDefault();
         console.log('Submited')
         // console.log(card)
-
         //Validation
         if (!card.first_name) {
             setErrorMessage("Please enter your first name.");
@@ -45,11 +45,11 @@ function AddCard() {
             setErrorMessage(null)
             setSuccessMessage("Form Submitted")
             axios
-                .post("https://fakestoreapi.com/users", card)
+            // .get(`/cards/${cardId}`)
+                .post("petsitters/cards", card)
                 .then((res) => res.data)
                 .then((json) => (console.log(json)))
         }
-
     }
 
     const handleOnChange = (event) => {
@@ -58,80 +58,57 @@ function AddCard() {
             return {
                 ...preCard,
                 [event.target.name]: event.target.value
-
-
             }
         })
-
     }
 
-
     return (
-        <div id='addCard'>
-            <h1>Add Card</h1>
-            <form
-                style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}
-                onSubmit={handleSubmit}
-            >
+        <ContentContainer>
+            <div id='addCard'>
+                <Bodytext>
+                    <h1>Post a job</h1>
+                </Bodytext>
+                <form
+                    style={{ display: 'flex', marginTop: '80px', flexDirection: 'column', alignItems: 'center' }}
+                    onSubmit={handleSubmit}
+                >
+                    <InputWrapper>
+                        <label htmlFor="first_name">First Name:</label>
+                        <TextField id="first_name" variant="filled" type='text' name='first_name' value={card.first_name} onChange={handleOnChange} />
 
+                        <label htmlFor="last_name">Last Name:</label>
+                        <TextField id="last_name" variant="filled" type='text' name='last_name' value={card.last_name} onChange={handleOnChange} />
 
-                <InputWrapper>
-                    <label htmlFor="first_name">First Name:</label>
-                    <TextField id="first_name" variant="filled" type='text' name='first_name' value={card.first_name} onChange={handleOnChange} />
+                        <label htmlFor="email">Email:</label>
+                        <TextField id="email" variant="filled" type='email' name='email' value={card.email} onChange={handleOnChange}
+                            InputProps={{
+                                endAdornment: (
+                                    <InputAdornment position="end"> @ </InputAdornment>),
+                            }} />
 
-                    <label htmlFor="last_name">Last Name:</label>
-                    <TextField id="last_name" variant="filled" type='text' name='last_name' value={card.last_name} onChange={handleOnChange} />
+                        <label htmlFor="phone">Phone:</label>
+                        <TextField id="phone" variant="filled" type='number' name='phone' value={card.phone} onChange={handleOnChange} />
 
-                    <label htmlFor="email">Email:</label>
-                    <TextField id="email" variant="filled" type='email' name='email' value={card.email} onChange={handleOnChange}
-                        InputProps={{
-                            endAdornment: (
-                                <InputAdornment position="end">
-                                    @
-                                </InputAdornment>
-                            ),
-                        }} />
+                        <label htmlFor="description">Description:</label>
+                        <TextField id="description" variant="filled" type='text' name='description' value={card.description} onChange={handleOnChange} multiline rows={3} />
 
-                    <label htmlFor="phone">Phone:</label>
-                    <TextField id="phone" variant="filled" type='number' name='phone' value={card.phone} onChange={handleOnChange} />
+                        <AccountCircle sx={{ color: 'action.active', mr: 1, mt: 2 }} />
+                        <input id="photo" type='file' name='photo' accept='.png .jpg .jpeg' />
+                    </InputWrapper>
 
-                    <label htmlFor="description">Description:</label>
-                    <TextField id="description" variant="filled" type='text' name='description' value={card.description} onChange={handleOnChange} multiline rows={3} />
+                        <LinkedButton 
+                        style={{
+                            backgroundColor: Colors.white,
+                            width: '100%',
+                            marginTop: '20px',
+                        }} id='submiBtn' onClick={handleSubmit}>Add Card</LinkedButton>
 
+                        <h4 style={{ marginTop: '30px', color: 'red'}}>{errorMessage}{successMessage}
+                        </h4>
 
-                    <AccountCircle sx={{ color: 'action.active', mr: 1, mt: 2 }} />
-                    <input id="photo" type='file' label='oho' name='photo' accept='.png .jpg .jpeg' />
-
-                </InputWrapper>
-
-                <div>
-
-
-
-                </div>
-
-                {/* <InputWrapper> */}
-                {/* <label htmlFor="last_name">Last Name:</label>
-                    <input type='text' name='last_name' value={card.last_name} onChange={handleOnChange} /> */}
-                {/* </InputWrapper> */}
-
-                <InputWrapper>
-
-                </InputWrapper>
-
-                <div>
-
-                    <LinkedButton id='submiBtn' onClick={handleSubmit}>Add Card</LinkedButton>
-
-
-                </div>
-                <div>
-                    {errorMessage}{successMessage}
-                </div>
-
-            </form>
-
-        </div>
+                </form>
+            </div>
+        </ContentContainer>
     )
 }
 

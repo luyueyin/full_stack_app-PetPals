@@ -16,6 +16,7 @@ export const Footertext = styled(Typography)(({ theme }) => ({
     },
     fontSize: '0.9rem',
     textAlign: 'center',
+    fontWeight: 'lighter',
 }))
 
 export const IconTitle = styled(Typography)(({ theme }) => ({
@@ -50,3 +51,5 @@ export const Icontext = styled(Typography)(({ theme }) => ({
     textAlign: 'center',
     color: Colors.black
 }))
+
+ 

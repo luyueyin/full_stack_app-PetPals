@@ -24,17 +24,18 @@ const BootstrapButton = styled(Button)({
 });
 
 export const LinkedButton = styled(Button)({
+    textTransform: 'none',
     fontSize: 15,
     fontWeight: 'lighter',
-    padding: '7px 15px',
-    lineHeight: 1.5,
-    marginTop: '40px',
+    padding: '9px 10px',
+    borderRadius: '5px',
     backgroundColor: Colors.primary,
     color: Colors.black,
+    width: '12rem',
     '&:hover': {
         // backgroundColor: Colors.black,
-        backgroundColor: lighten(0.03, Colors.primary),
-        boxShadow: '1px 2px 6px rgba(0, 0, 0, 0.2);',
+        backgroundColor: lighten(0.04, Colors.primary),
+        boxShadow: '1px 2px 6px rgba(0, 0, 1, 0.3);',
     },
     '&:disabled': {
         backgroundColor: 'transparent',
@@ -54,7 +55,6 @@ export default function CustomizedButtons(props) {
 
 
 export const SelectionButton = styled(Button)(({ props }) => ({
-
     padding: '80px 0px 40px 0px',
     display: 'flex',
     flexDirection: 'column',
@@ -64,20 +64,11 @@ export const SelectionButton = styled(Button)(({ props }) => ({
 }))
 
 
-// export const StyledLinkButton = ({to, children}) => {
-//     return (
-//         <Link
-//             to={to}
-//             style= {{ textDecoration: 'none'}}
-//         ><LinkedButton>{children}</LinkedButton> </Link>
-//     )
-// }
-
 export const StyledLinkButton = ({to, children}) => {
     return (
         <Link
             to={to}
-            style= {{ textDecoration: 'none'}}
+            style= {{ textDecoration: 'none' }}
         ><LinkedButton>{children}</LinkedButton> </Link>
     )
 }

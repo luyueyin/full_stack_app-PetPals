@@ -1,19 +1,20 @@
 import { styled } from "@mui/material/styles";
 import { Box, Typography, Container } from "@mui/material";
-import theme, {Colors} from '../Theme';
+import theme, { Colors } from '../Theme';
 
-export const BannerContainer = styled(Box)(() => ({
+export const BannerContainer = styled(Box)(({ theme }) => ({
+    [theme.breakpoints.up('md')]: {
+        flexDirection: 'row',
+    },
     display: 'flex',
+    flexDirection: 'column',
     justifyContent: 'center',
+    alignItems: 'center',
     width: '100%',
     height: '100%',
-    padding: '0px 0px',
-    marginTop: '75px',
+    marginTop: '100px',
     // backgroundColor: Colors.dk_primary,
-    [theme.breakpoints.down('sm')]: {
-        flexDirection: 'column',
-        alignItems: 'center',
-    }
+
 }))
 
 export const BannerContent = styled(Box)(() => ({
@@ -21,23 +22,22 @@ export const BannerContent = styled(Box)(() => ({
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
-    maxWidth: 420,
+    maxWidth: 780,
+    width: '100%',
+    height: '100%',
     padding: '30px',
 }))
 
-export const BannerTitle = styled(Typography)(({ theme }) => ({
-    lineHeight: 1.3,
-    fontSize: '80px',
-    marginBottom: '20px',
-    [theme.breakpoints.down('sm')]: {
-        fontSize: '40px',
-    }
-}))
 
 export const BannerDescription = styled(Typography)(({ theme }) => ({
-    lineHeight: 1.3,
-    letterSpacing: 1.1,
+    lineHeight: 1.8,
+    letterSpacing: 1.4,
     marginBottom: '3em',
+    fontSize: '25px',
+    width: '100%',
+    marginLeft: '3rem',
+    position: 'relative',
+    flexDirection: 'column',
     [theme.breakpoints.down('sm')]: {
         lineHeight: 1.15,
         letterSpacing: 1.15,
@@ -45,14 +45,13 @@ export const BannerDescription = styled(Typography)(({ theme }) => ({
     },
 }))
 
-export const BannerImage = styled('img')(({src, theme}) => ({
+export const BannerImage = styled('img')(({ src, theme }) => ({
     src: `url(${src})`,
-    width: '500px',
-    [theme.breakpoints.down('md')]: {
-        width: '300px',
-    },
+    width: '50%',
+
+
     [theme.breakpoints.down('sm')]: {
-        width: '220px',
+        // width: '220px',
         // height: '300px',
     }
 }))
